@@ -1,70 +1,83 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body.bg-login {
-    background-color: #e3f2fd;
+    background-color: #bae6fd;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 20px;
 }
 
 .login-card {
     background-color: #ffffff;
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    max-width: 380px;
+    padding: 25px;
     text-align: center;
 }
 
-.logo-text {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #1976d2;
-    display: block;
-    margin-bottom: 1rem;
+.logo-container {
+    margin-bottom: 10px;
 }
 
-h2 {
-    margin-bottom: 1.5rem;
-    color: #333333;
+.logo-text {
+    font-size: 24px;
+    font-weight: 900;
+    color: #1d4ed8;
+    letter-spacing: 1px;
+}
+
+.login-card h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #111827;
 }
 
 .form-group {
-    margin-bottom: 1.2rem;
     text-align: left;
+    margin-bottom: 15px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 0.4rem;
-    color: #555555;
-    font-size: 0.9rem;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #374151;
 }
 
 .form-group input {
     width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
+    padding: 9px 12px;
+    border: 1px solid #9ca3af;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
 }
 
 .links-group {
     display: flex;
     justify-content: space-between;
-    font-size: 0.85rem;
-    margin-bottom: 1.5rem;
+    font-size: 12px;
+    margin-bottom: 20px;
 }
 
 .links-group a {
-    color: #1976d2;
+    color: #2563eb;
     text-decoration: none;
 }
 
@@ -74,24 +87,25 @@ h2 {
 
 .btn-primary {
     width: 100%;
-    padding: 0.75rem;
-    background-color: #1976d2;
-    color: white;
+    background-color: #2563eb;
+    color: #ffffff;
     border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 15px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .btn-primary:hover {
-    background-color: #1565c0;
+    background-color: #1d4ed8;
 }
 
 .login-footer {
-    margin-top: 2rem;
-    font-size: 0.75rem;
-    color: #777777;
-    border-top: 1px solid #eeeeee;
-    padding-top: 1rem;
+    margin-top: 25px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 15px;
+    font-size: 11px;
+    color: #4b5563;
+    line-height: 1.4;
 }
