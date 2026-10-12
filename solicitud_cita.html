@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpPets - Solicitud de Cita</title>
+    <link rel="stylesheet" href="estilos/solicitud_cita.css">
+</head>
+<body class="bg-pattern">
+
+    <!-- Contenedor principal estilo ventana de navegador -->
+    <div class="web-page-container">
+
+        <!-- Barra de Dirección de Navegador simulada -->
+        <div class="browser-address-bar">
+            <span class="browser-dots"></span>
+            <span class="browser-url">https://SolicitarCitaHP.com</span>
+        </div>
+
+        <!-- Franja Superior Azul ("Solicitud de cita") -->
+        <header class="top-bar">
+            <h1 class="options-title">Solicitud de cita</h1>
+        </header>
+
+        <!-- Cuerpo central con el formulario de solicitud -->
+        <main class="main-content">
+            <div class="form-card-container">
+                
+                <form action="diagrama2_opciones_cliente.html" method="POST">
+                    
+                    <!-- Campo Mascota -->
+                    <div class="form-row">
+                        <label for="mascota">MASCOTA:</label>
+                        <select id="mascota" class="form-select">
+                            <option value="">ComboBox</option>
+                            <option value="toby">Toby</option>
+                            <option value="firulais">Firulais</option>
+                        </select>
+                    </div>
+
+                    <!-- Tipo de Servicio (Botones de opción / radio con estilo) -->
+                    <div class="form-row">
+                        <label>TIPO DE<br>SERVICIO:</label>
+                        <div class="service-radio-group">
+                            <label class="radio-btn-label">
+                                <input type="radio" name="tipo_servicio" value="medico" checked> 
+                                <span>medico</span>
+                            </label>
+                            <label class="radio-btn-label">
+                                <input type="radio" name="tipo_servicio" value="peluqueria"> 
+                                <span>peluqueria</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Fecha (Día / Mes / Año y Hora) -->
+                    <div class="form-row">
+                        <label for="fecha">FECHA<br>(DIA / MES/AÑO Y HORA):</label>
+                        <select id="fecha" class="form-select">
+                            <option value="">ComboBox</option>
+                            <option value="slot1">07/10/2026 - 10:00 AM</option>
+                            <option value="slot2">08/10/2026 - 02:00 PM</option>
+                        </select>
+                    </div>
+
+                    <!-- Botón Enviar -->
+                    <div class="button-container">
+                        <button type="submit" class="btn-submit">ENVIAR</button>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>
