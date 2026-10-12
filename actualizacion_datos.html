@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpPets - Actualizar Datos</title>
+    <link rel="stylesheet" href="estilos/actualizacion_datos.css">
+</head>
+<body class="bg-pattern">
+
+    <!-- Contenedor principal estilo ventana de navegador -->
+    <div class="web-page-container">
+
+        <!-- Franja Superior -->
+        <header class="top-bar">
+            <div class="options-title">
+                Actualizar Datos
+            </div>
+        </header>
+
+        <!-- Cuerpo central con el formulario de actualización -->
+        <main class="main-content">
+            <div class="form-card-container">
+                
+                <h2 class="form-heading">Actualizar Datos Personales</h2>
+
+                <form action="panel_cliente.html" method="POST">
+                    
+                    <!-- Nombre Completo -->
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" placeholder="Nombre del Cliente">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Cliente@email.com">
+                    </div>
+
+                    <!-- Dirección -->
+                    <div class="form-group">
+                        <label for="direccion">Direccion:</label>
+                        <input type="text" id="direccion" placeholder="CRA 108....">
+                    </div>
+
+                    <!-- Contraseña Anterior -->
+                    <div class="form-group">
+                        <label for="password-old">contraseña anterior</label>
+                        <input type="password" id="password-old" placeholder="*****">
+                    </div>
+
+                    <!-- Nueva Contraseña -->
+                    <div class="form-group">
+                        <label for="password-new">Nueva Contraseña</label>
+                        <input type="password" id="password-new" placeholder="*****">
+                    </div>
+
+                    <!-- Acciones -->
+                    <div class="button-group">
+                        <button type="submit" class="btn-submit">Guardar Cambios</button>
+                        <a href="panel_cliente.html" class="btn-volver">Volver al panel</a>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>
