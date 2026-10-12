@@ -1,0 +1,162 @@
+/* RESET Y ESTILOS GENERALES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.bg-pattern {
+    background-color: #e5e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* CONTENEDOR TIPO VENTANA DE NAVEGADOR / WIREFRAME */
+.web-page-container {
+    background-color: #ffffff;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 950px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* FRANJA SUPERIOR */
+.top-bar {
+    background-color: #93c5fd; /* Azul claro característico del wireframe */
+    border-bottom: 2px solid #333333;
+    padding: 15px 25px;
+}
+
+.options-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.star-icon {
+    font-size: 22px;
+}
+
+/* CONTENIDO PRINCIPAL CON FONDO DE HUELLAS */
+.main-content {
+    /* Simulamos el fondo con patrón de huellas sutiles y tono blanco */
+    background-color: #ffffff;
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 30px 30px;
+    padding: 40px 50px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* SECCIÓN DEL LOGO (PERRO, GATO Y CRUZ) */
+.logo-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-placeholder {
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.animal-silhouette {
+    width: 240px;
+    height: 240px;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    border-radius: 50% 40% 60% 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(3, 105, 161, 0.3);
+}
+
+.cross-badge {
+    background-color: #ffffff;
+    color: #0284c7;
+    font-size: 32px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* SECCIÓN DE BOTONES DE OPCIONES */
+.menu-options {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 350px;
+}
+
+.btn-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #bfdbfe; /* Azul claro de los botones */
+    color: #1e3a8a;
+    text-decoration: none;
+    padding: 12px 20px;
+    border: 1.5px solid #3b82f6;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.btn-menu:hover {
+    background-color: #93c5fd;
+    transform: translateY(-2px);
+}
+
+/* BOTÓN ESPECIAL DE CERRAR SESIÓN */
+.btn-menu.btn-danger {
+    background-color: #f87171; /* Rojo suave acorde al wireframe */
+    color: #ffffff;
+    border-color: #ef4444;
+}
+
+.btn-menu.btn-danger:hover {
+    background-color: #ef4444;
+}
+
+.icon {
+    font-size: 16px;
+}
+
+/* FRANJA INFERIOR (FOOTER) */
+.footer-bar {
+    background-color: #93c5fd;
+    border-top: 2px solid #333333;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    color: #1e293b;
+    line-height: 1.5;
+}
