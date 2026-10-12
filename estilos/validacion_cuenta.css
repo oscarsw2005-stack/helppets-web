@@ -1,0 +1,119 @@
+/* RESET Y ESTILOS GENERALES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.bg-pattern {
+    background-color: #e5e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* CONTENEDOR PRINCIPAL TIPO VENTANA */
+.web-page-container {
+    background-color: #ffffff;
+    border: 2px solid #333333;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 950px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* FRANJA SUPERIOR */
+.top-bar {
+    background-color: #e2e8f0; /* Tono gris claro característico del wireframe de validación */
+    border-bottom: 2px solid #333333;
+    padding: 15px 25px;
+}
+
+.options-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* CONTENIDO PRINCIPAL CON FONDO DE PUNTOS */
+.main-content {
+    background-color: #ffffff;
+    background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+    background-size: 25px 25px;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TARJETA DEL FORMULARIO */
+.form-card-container {
+    background-color: #ffffff;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* TÍTULO DE LA TARJETA */
+.form-heading {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 30px;
+}
+
+/* CAMPOS DEL FORMULARIO */
+.form-group {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #9ca3af;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #ffffff;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* BOTÓN DE ENVIAR */
+.btn-submit {
+    width: 100%;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 11px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #1d4ed8;
+}
