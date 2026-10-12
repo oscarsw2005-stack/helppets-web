@@ -1,0 +1,187 @@
+/* RESET Y ESTILOS GENERALES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.bg-pattern {
+    background-color: #e5e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* CONTENEDOR PRINCIPAL TIPO VENTANA */
+.web-page-container {
+    background-color: #ffffff;
+    border: 2px solid #333333;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 950px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* FRANJA SUPERIOR */
+.top-bar {
+    background-color: #93c5fd; /* Azul claro característico */
+    border-bottom: 2px solid #333333;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-icon {
+    font-size: 18px;
+}
+
+/* ESTILO DEL BOTÓN VOLVER AL INICIO EN LA CABECERA */
+.btn-volver {
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.btn-volver:hover {
+    background-color: #1d4ed8;
+}
+
+/* CONTENIDO PRINCIPAL CON FONDO DE PUNTOS */
+.main-content {
+    background-color: #ffffff;
+    background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+    background-size: 25px 25px;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TARJETA DEL FORMULARIO */
+.form-card-container {
+    background-color: #ffffff;
+    border: 1.5px solid #333333;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 440px;
+    padding: 30px 40px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* LOGOTIPO FLOTANTE SUPERIOR DERECHO */
+.form-logo-badge {
+    position: absolute;
+    top: -35px;
+    right: 25px;
+}
+
+.logo-circle {
+    width: 75px;
+    height: 75px;
+    background: radial-gradient(circle, #0284c7 0%, #0369a1 100%);
+    border: 2px solid #333333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo-circle span {
+    font-size: 9px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+/* TÍTULO DE REGISTRO */
+.form-heading {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e293b;
+    margin-bottom: 25px;
+}
+
+/* CAMPOS DEL FORMULARIO */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #9ca3af;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #ffffff;
+    outline: none;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* BOTÓN DE REGISTRAR */
+.btn-submit {
+    width: 100%;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #1d4ed8;
+}
+
+/* FRANJA INFERIOR (PIE DE PÁGINA) */
+.footer-bar {
+    background-color: #93c5fd;
+    border-top: 2px solid #333333;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    color: #1e293b;
+    line-height: 1.4;
+}
