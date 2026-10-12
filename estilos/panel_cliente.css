@@ -28,7 +28,7 @@ body.bg-pattern {
 
 /* FRANJA SUPERIOR */
 .top-bar {
-    background-color: #93c5fd; /* Azul claro característico del wireframe */
+    background-color: #93c5fd;
     border-bottom: 2px solid #333333;
     padding: 15px 25px;
 }
@@ -46,11 +46,10 @@ body.bg-pattern {
     font-size: 22px;
 }
 
-/* CONTENIDO PRINCIPAL CON FONDO DE HUELLAS */
+/* CONTENIDO PRINCIPAL CON FONDO DE PUNTOS Y HUELLAS */
 .main-content {
-    /* Simulamos el fondo con patrón de huellas sutiles y tono blanco */
     background-color: #ffffff;
-    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
     background-size: 30px 30px;
     padding: 40px 50px;
 }
@@ -62,7 +61,7 @@ body.bg-pattern {
     gap: 40px;
 }
 
-/* SECCIÓN DEL LOGO (PERRO, GATO Y CRUZ) */
+/* SECCIÓN DEL LOGO (PERRO Y GATO CON CRUZ) */
 .logo-section {
     flex: 1;
     display: flex;
@@ -118,7 +117,7 @@ body.bg-pattern {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    background-color: #bfdbfe; /* Azul claro de los botones */
+    background-color: #bfdbfe;
     color: #1e3a8a;
     text-decoration: none;
     padding: 12px 20px;
@@ -137,7 +136,7 @@ body.bg-pattern {
 
 /* BOTÓN ESPECIAL DE CERRAR SESIÓN */
 .btn-menu.btn-danger {
-    background-color: #f87171; /* Rojo suave acorde al wireframe */
+    background-color: #f87171;
     color: #ffffff;
     border-color: #ef4444;
 }
@@ -150,7 +149,7 @@ body.bg-pattern {
     font-size: 16px;
 }
 
-/* FRANJA INFERIOR (FOOTER) */
+/* FRANJA INFERIOR (PIE DE PÁGINA) */
 .footer-bar {
     background-color: #93c5fd;
     border-top: 2px solid #333333;
