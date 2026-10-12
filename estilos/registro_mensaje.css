@@ -1,0 +1,99 @@
+/* RESET Y ESTILOS GENERALES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.bg-pattern {
+    background-color: #e5e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* CONTENEDOR PRINCIPAL TIPO VENTANA */
+.web-page-container {
+    background-color: #ffffff;
+    border: 2px solid #333333;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 950px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* FRANJA SUPERIOR */
+.top-bar {
+    background-color: #e2e8f0; /* Tono gris claro característico del wireframe */
+    border-bottom: 2px solid #333333;
+    padding: 15px 25px;
+    text-align: center;
+}
+
+.options-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+}
+
+/* CONTENIDO PRINCIPAL CON FONDO DE PUNTOS */
+.main-content {
+    background-color: #ffffff;
+    background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+    background-size: 25px 25px;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TARJETA CENTRAL DE ÉXITO (FONDO VERDE CLARO) */
+.success-card {
+    background-color: #d1fae5; /* Verde claro estilo wireframe */
+    border: 1.5px solid #34d399; /* Borde verde */
+    border-radius: 6px;
+    width: 100%;
+    max-width: 650px;
+    padding: 50px 30px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* TÍTULOS Y TEXTOS */
+.success-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #047857; /* Verde oscuro para contraste */
+    margin-bottom: 15px;
+}
+
+.success-message {
+    font-size: 15px;
+    color: #1f2937;
+    margin-bottom: 35px;
+}
+
+/* BOTÓN VOLVER AL INICIO */
+.btn-volver {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-volver:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
