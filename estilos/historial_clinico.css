@@ -1,0 +1,163 @@
+/* RESET Y ESTILOS GENERALES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.bg-pattern {
+    background-color: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* CONTENEDOR PRINCIPAL TIPO VENTANA */
+.web-page-container {
+    background-color: #ffffff;
+    border: 2px solid #333333;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 1100px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* BARRA DE NAVEGADOR SIMULADA */
+.browser-address-bar {
+    background-color: #e2e8f0;
+    border-bottom: 2px solid #333333;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.browser-dots {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #94a3b8;
+    border-radius: 50%;
+    box-shadow: 18px 0 0 #94a3b8, 36px 0 0 #94a3b8;
+}
+
+.browser-url {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 15px;
+    padding: 3px 15px;
+    font-size: 13px;
+    color: #475569;
+    flex: 1;
+    max-width: 500px;
+    margin-left: 25px;
+}
+
+/* BARRA SUPERIOR CON BOTÓN VOLVER AL PANEL */
+.top-action-bar {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ffffff;
+}
+
+.btn-volver-panel {
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease;
+}
+
+.btn-volver-panel:hover {
+    background-color: #1d4ed8;
+}
+
+/* CABECERA CON TÍTULO PRINCIPAL */
+.title-bar {
+    background-color: #ffffff;
+    border-top: 2px solid #333333;
+    border-bottom: 2px solid #333333;
+    padding: 25px;
+    text-align: center;
+    margin: 0 30px;
+}
+
+.main-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1e293b;
+    letter-spacing: 1px;
+}
+
+/* CONTENIDO PRINCIPAL CON TABLA */
+.main-content {
+    background-color: #ffffff;
+    background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+    background-size: 25px 25px;
+    padding: 40px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.table-container {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1.5px solid #333333;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* ESTILOS DE LA TABLA CLÍNICA */
+.clinical-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.clinical-table th, 
+.clinical-table td {
+    border: 1.5px solid #333333;
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #1f2937;
+}
+
+.clinical-table th {
+    background-color: #e2e8f0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* DISEÑO DE LOS FILTROS DESPLEGABLES EN LA CABECERA */
+.filter-select {
+    background: transparent;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1e293b;
+    cursor: pointer;
+    outline: none;
+    float: right;
+    padding: 0 2px;
+}
+
+/* FILAS ALTERNADAS Y MUESTRAS */
+.clinical-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.data-sample {
+    color: #4b5563;
+    font-size: 13px;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpPets - Historial Clínico</title>
+    <link rel="stylesheet" href="estilos/historial_clinico.css">
+</head>
+<body class="bg-pattern">
+
+    <!-- Contenedor principal estilo ventana de navegador -->
+    <div class="web-page-container">
+
+        <!-- Barra de Dirección de Navegador simulada -->
+        <div class="browser-address-bar">
+            <span class="browser-dots"></span>
+            <span class="browser-url">https://historialcitas.com</span>
+        </div>
+
+        <!-- Cabecera superior con el Botón "Volver al panel" -->
+        <div class="top-action-bar">
+            <a href="panel_cliente.html" class="btn-volver-panel">Volver al panel</a>
+        </div>
+
+        <!-- Título principal -->
+        <header class="title-bar">
+            <h1 class="main-title">HISTORIAL CLINICO</h1>
+        </header>
+
+        <!-- Contenido principal con la tabla de historial -->
+        <main class="main-content">
+            <div class="table-container">
+                <table class="clinical-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                MASCOTA 
+                                <select class="filter-select" aria-label="Filtrar por Mascota">
+                                    <option value="">▼</option>
+                                    <option value="toby">Toby</option>
+                                    <option value="firulais">Firulais</option>
+                                </select>
+                            </th>
+                            <th>
+                                FECHA 
+                                <select class="filter-select" aria-label="Filtrar por Fecha">
+                                    <option value="">▼</option>
+                                    <option value="recientes">Más recientes</option>
+                                    <option value="antiguas">Más antiguas</option>
+                                </select>
+                            </th>
+                            <th>
+                                receta y cuidados 
+                                <select class="filter-select" aria-label="Filtrar por Receta y cuidados">
+                                    <option value="">▼</option>
+                                    <option value="antibiotico">Antibiótico</option>
+                                    <option value="reposo">Reposo</option>
+                                </select>
+                            </th>
+                            <th>
+                                Vacunas y desparasitantes 
+                                <select class="filter-select" aria-label="Filtrar por Vacunas y desparasitantes">
+                                    <option value="">▼</option>
+                                    <option value="rabia">Rabia</option>
+                                    <option value="triple">Triple</option>
+                                </select>
+                            </th>
+                            <th>
+                                Veterinario 
+                                <select class="filter-select" aria-label="Filtrar por Veterinario">
+                                    <option value="">▼</option>
+                                    <option value="carlos">Dr. Carlos Gómez</option>
+                                    <option value="maria">Dra. María López</option>
+                                </select>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="data-sample">nombre, edad, raza, peso</td>
+                            <td class="data-sample">dia/mes/año HORA</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!-- Filas de relleno vacías para imitar el diseño de wireframe -->
+                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>
