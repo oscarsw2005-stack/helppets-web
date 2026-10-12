@@ -1,11 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HelpPets - Registro de Cliente</title>
+    <link rel="stylesheet" href="estilos_registro_cliente.css">
 </head>
-<body>
-    
+<body class="bg-pattern">
+
+    <!-- Contenedor principal estilo ventana de navegador -->
+    <div class="web-page-container">
+
+        <!-- Franja Superior (Cabecera) -->
+        <header class="top-bar">
+            <div class="options-title">
+                <span class="user-icon">👤</span> Registro de cliente
+            </div>
+            <!-- Botón Volver al Inicio que redirige al panel -->
+            <a href="diagrama2_opciones_cliente.html" class="btn-volver">Volver al Inicio</a>
+        </header>
+
+        <!-- Cuerpo central con el formulario de registro -->
+        <main class="main-content">
+            <div class="form-card-container">
+                
+                <!-- Logotipo flotante en la esquina superior derecha del formulario -->
+                <div class="form-logo-badge">
+                    <div class="logo-circle">
+                        <span>HELP PETS</span>
+                    </div>
+                </div>
+
+                <h2 class="form-heading">Registrarse</h2>
+
+                <form action="diagrama2_opciones_cliente.html" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="nombres">Nombres</label>
+                        <input type="text" id="nombres" value="Oscar Daniel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" value="Hernández Rojas" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo" value="petito@hotmail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo_documento">Tipo de documento</label>
+                        <select id="tipo_documento">
+                            <option value="combobox" selected>ComboBox</option>
+                            <option value="cc">Cédula de Ciudadanía</option>
+                            <option value="ce">Cédula de Extranjería</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="documento">Documento</label>
+                        <input type="text" id="documento" value="1021901" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="direccion">Direccion</label>
+                        <input type="text" id="direccion" value="cra 108 55b 16" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" id="contrasena" value="******" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmar_contrasena">Confirmar contraseña</label>
+                        <input type="password" id="confirmar_contrasena" value="******" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Registrar</button>
+
+                </form>
+            </div>
+        </main>
+
+        <!-- Franja Inferior (Pie de página) -->
+        <footer class="footer-bar">
+            <p>Contacto: info@veterinaria.com | Teléfono: 123-456-7890</p>
+            <p>© 2026</p>
+        </footer>
+
+    </div>
+
 </body>
 </html>
