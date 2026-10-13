@@ -24,36 +24,42 @@
                 
                 <h2 class="form-heading">Actualizar Datos Personales</h2>
 
-                <form action="panel_cliente.html" method="POST">
+                
+                <form action="actualizacion_exitosa.html" method="GET">
                     
-                    <!-- Nombre Completo -->
+                    
                     <div class="form-group">
                         <label for="nombre">Nombre Completo:</label>
-                        <input type="text" id="nombre" placeholder="Nombre del Cliente">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre del Cliente">
                     </div>
 
-                    <!-- Email -->
+                    
+                    <div class="form-group">
+                        <label for="telefono">telefono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="34431***">
+                    </div>
+
+                    
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" placeholder="Cliente@email.com">
+                        <input type="email" id="email" name="email" placeholder="cliente@email.com">
                     </div>
 
-                    <!-- Dirección -->
+               
                     <div class="form-group">
                         <label for="direccion">Direccion:</label>
-                        <input type="text" id="direccion" placeholder="CRA 108....">
+                        <input type="text" id="direccion" name="direccion" placeholder="CRA 108....">
                     </div>
 
-                    <!-- Contraseña Anterior -->
                     <div class="form-group">
                         <label for="password-old">contraseña anterior</label>
-                        <input type="password" id="password-old" placeholder="*****">
+                        <input type="password" id="password-old" name="password_old" placeholder="*****">
                     </div>
 
-                    <!-- Nueva Contraseña -->
+               
                     <div class="form-group">
                         <label for="password-new">Nueva Contraseña</label>
-                        <input type="password" id="password-new" placeholder="*****">
+                        <input type="password" id="password-new" name="password_new" placeholder="*****">
                     </div>
 
                     <!-- Acciones -->
