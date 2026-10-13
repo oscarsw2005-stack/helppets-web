@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpPets - Registro de Mascotas</title>
+    <link rel="stylesheet" href="estilos/registro_mascota.css">
+</head>
+<body class="bg-pattern">
+
+    <!-- Contenedor principal estilo ventana de navegador -->
+    <div class="web-page-container">
+
+        <!-- Franja Superior -->
+        <header class="top-bar">
+            <div class="options-title">
+                Registro de Mascotas
+            </div>
+        </header>
+
+        <!-- Cuerpo central con el formulario de registro -->
+        <main class="main-content">
+            <div class="form-card-container">
+                
+               
+                <form action="registro_mascota_exitoso.html" method="GET">
+                    
+                   
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre de la mascota" required>
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <label for="raza">Raza:</label>
+                        <select id="raza" name="raza" class="form-select" required>
+                            <option value="">Seleccione una raza...</option>
+                            <option value="criollo">Criollo / Mestizo</option>
+                            <option value="labrador">Labrador</option>
+                            <option value="poodle">Poodle</option>
+                            <option value="siames">Siamés</option>
+                        </select>
+                    </div>
+
+                   
+                    <div class="form-group">
+                        <label for="especie">Especie:</label>
+                        <select id="especie" name="especie" class="form-select" required>
+                            <option value="">Seleccione una especie...</option>
+                            <option value="canino">Canino</option>
+                            <option value="felino">Felino</option>
+                        </select>
+                    </div>
+
+                   
+                    <div class="form-group">
+                        <label for="peso">Peso (kg):</label>
+                        <input type="number" id="peso" name="peso" placeholder="Peso en kg" step="0.1" min="0.1" required>
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <label for="sexo">Sexo:</label>
+                        <select id="sexo" name="sexo" class="form-select" required>
+                            <option value="">Seleccione el sexo...</option>
+                            <option value="Macho">Macho</option>
+                            <option value="Hembra">Hembra</option>
+                        </select>
+                    </div>
+
+                    
+                    
+                    <div class="form-group">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="descripcion" name="descripcion" rows="3" placeholder="Descripción de la mascota" required></textarea>
+                    </div>
+
+                  
+                    
+                    <div class="form-group">
+                        <label for="datos_extra">Datos Extra (Condición médica, etc.):</label>
+                        <textarea id="datos_extra" name="datos_extra" rows="3" placeholder="Condición médica, notas adicionales" required></textarea>
+                    </div>
+
+                    <!-- Botón Registrar -->
+                    <div class="button-group">
+                        <button type="submit" class="btn-submit">Registrar Mascota</button>
+                    </div>
+
+                </form>
+
+                
+                <div class="button-group-secondary">
+                    <a href="panel_cliente.html" class="btn-volver">Volver al panel</a>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>
