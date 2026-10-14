@@ -61,7 +61,7 @@ body.bg-pattern {
     gap: 40px;
 }
 
-/* SECCIÓN DEL LOGO (PERRO Y GATO CON CRUZ) */
+/* SECCIÓN DEL LOGO (PERRO Y GATO) */
 .logo-section {
     flex: 1;
     display: flex;
@@ -70,37 +70,22 @@ body.bg-pattern {
 }
 
 .logo-placeholder {
-    width: 280px;
-    height: 280px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
-.animal-silhouette {
-    width: 240px;
-    height: 240px;
-    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-    border-radius: 50% 40% 60% 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    box-shadow: 0 8px 20px rgba(3, 105, 161, 0.3);
-}
-
-.cross-badge {
-    background-color: #ffffff;
-    color: #0284c7;
-    font-size: 32px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Forzar a que cualquier imagen dentro del contenedor se ajuste correctamente */
+.logo-placeholder img,
+.pet-illustration {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+    max-height: 280px;
+    object-fit: contain;
 }
 
 /* SECCIÓN DE BOTONES DE OPCIONES */
