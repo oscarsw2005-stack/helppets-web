@@ -3,64 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HelpPets - Opciones del Cliente</title>
-    <link rel="stylesheet" href="estilos/panel_cliente.css">
+    <title>HelpPets - Opciones Cliente</title>
+    <link rel="stylesheet" href="estilos_panel_cliente.css">
+    <!-- Iconos Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-pattern">
 
-    <!-- Contenedor principal de la página -->
+    <!-- Contenedor principal tipo ventana de navegador -->
     <div class="web-page-container">
 
-        <!-- Franja Superior (Cabecera) -->
+        <!-- Barra de Dirección de Navegador simulada -->
+        <div class="browser-address-bar">
+            <span class="browser-dots"></span>
+            <div class="browser-url-box">
+                <span class="browser-url">https://HelpPets.com</span>
+            </div>
+        </div>
+
+        <!-- Franja Superior Azul ("Opciones") -->
         <header class="top-bar">
-            <div class="options-title">
-                <span class="star-icon">☆</span> Opciones
+            <div class="top-bar-title">
+                <i data-lucide="star" class="star-icon"></i>
+                <h1>Opciones</h1>
             </div>
         </header>
 
-        <!-- Cuerpo central con el logo y botones de opciones -->
-<main class="main-content">
-            <div class="content-wrapper">
+        <!-- Cuerpo central con la imagen grande y los botones abajo/alineados -->
+        <main class="main-content">
+            <div class="content-layout">
                 
-                <!-- Logo de la veterinaria con imagen -->
+                <!-- Imagen grande del perro y gato -->
                 <div class="logo-section">
-                    <div class="logo-placeholder">
-                        <img src="estilos/perro_gato_fondo.png" alt="HelpPets Logo" class="logo-img">
-                    </div>
+                    <img src="estilos/perro_gato_fondo.png" alt="HelpPets Logo Perro y Gato" class="pet-logo-large">
+                </div>
+
+                <!-- Menú de opciones del cliente -->
+                <div class="options-menu">
+                    
+                    <a href="solicitud_cita.html" class="btn-option btn-blue">
+                        <i data-lucide="paw-print" class="btn-icon"></i>
+                        <span>Solicitar cita</span>
+                    </a>
+
+                    <a href="historial_clinico.html" class="btn-option btn-blue">
+                        <i data-lucide="paw-print" class="btn-icon"></i>
+                        <span>HISTORIAL CLINICO</span>
+                    </a>
+
+                    <a href="actualizacion_datos.html" class="btn-option btn-light-blue">
+                        <i data-lucide="refresh-cw" class="btn-icon"></i>
+                        <span>Actualizar datos</span>
+                    </a>
+
+                    <a href="registro_mascota.html" class="btn-option btn-light-blue">
+                        <i data-lucide="paw-print" class="btn-icon"></i>
+                        <span>Registrar mascota</span>
+                    </a>
+
+                    <a href="index.html" class="btn-option btn-red">
+                        <i data-lucide="lock" class="btn-icon"></i>
+                        <span>Cerrar sesión</span>
+                    </a>
+
                 </div>
 
             </div>
         </main>
 
-                <!-- Lista de botones del menú -->
-                <nav class="menu-options">
-                    <a href="solicitud_cita.html" class="btn-menu">
-                        <span class="icon">🐾</span> Solicitar cita
-                    </a>
-                    <a href="historial_clinico.html" class="btn-menu">
-                        <span class="icon">🐾</span> HISTORIAL CLINICO
-                    </a>
-                    <a href="actualizacion_datos.html" class="btn-menu">
-                        <span class="icon">🔄</span> Actualizar datos
-                    </a>
-                    <a href="registro_mascota.html" class="btn-menu">
-                        <span class="icon">🐾</span> Registrar mascota
-                    </a>
-                    <a href="index.html" class="btn-menu btn-danger">
-                        <span class="icon">🔒</span> Cerrar sesión
-                    </a>
-                </nav>
-
-            </div>
-        </main>
-
-        <!-- Franja Inferior (Pie de página) -->
-        <footer class="footer-bar">
+        <!-- Pie de página -->
+        <footer class="footer-banner">
             <p>Contacto: info@veterinaria.com | Teléfono: 123-456-7890</p>
             <p>© 2023 Veterinaria. Todos los derechos reservados.</p>
         </footer>
 
     </div>
 
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
