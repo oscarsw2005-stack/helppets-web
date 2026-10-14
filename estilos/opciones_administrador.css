@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor tipo navegador */
+.browser-mockup {
+    width: 100%;
+    max-width: 950px;
+    background: #ffffff;
+    border: 1px solid #b0b0b0;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.browser-header {
+    background-color: #e6e6e6;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 10px 0 10px;
+}
+
+.browser-tabs {
+    display: flex;
+}
+
+.tab {
+    background: #ffffff;
+    padding: 6px 15px;
+    font-size: 12px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    color: #333;
+}
+
+.browser-address-bar {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 6px 10px;
+    border-top: 1px solid #ccc;
+    gap: 15px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.url-input {
+    flex: 1;
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 4px 12px;
+    font-size: 13px;
+    color: #333;
+}
+
+/* Estilos internos de la página HelpPets */
+.main-container {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+/* Franja superior azul */
+.top-bar {
+    background-color: #a8d0f8;
+    padding: 15px 20px;
+    border-bottom: 1px solid #92bce4;
+}
+
+.top-bar h2 {
+    color: #222;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.top-bar h2 i {
+    margin-right: 5px;
+}
+
+/* Cuerpo central con patrón de huellas */
+.content-body {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 40px;
+    /* Simulamos el fondo con huellas de perro repetidas usando gradientes o patrón CSS */
+    background-image: radial-gradient(#d1d1d1 15%, transparent 16%), radial-gradient(#d1d1d1 15%, transparent 16%);
+    background-size: 80px 80px;
+    background-position: 0 0, 40px 40px;
+    background-color: #ffffff;
+    min-height: 350px;
+}
+
+/* Contenedor del Logo (Izquierda) */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vet-logo-placeholder {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, #0077b6 0%, #03045e 100%);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.vet-logo-placeholder .dog-icon {
+    font-size: 90px;
+    color: #ffffff;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+}
+
+.vet-logo-placeholder .cat-icon {
+    font-size: 50px;
+    color: #90e0ef;
+    position: absolute;
+    right: 25px;
+    bottom: 30px;
+}
+
+.cross-badge {
+    position: absolute;
+    bottom: 10px;
+    left: 60px;
+    background-color: #ffffff;
+    color: #0077b6;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Contenedor de Botones (Derecha) */
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 280px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background 0.2s;
+    font-weight: 500;
+}
+
+.btn-blue {
+    background-color: #a8d0f8;
+    color: #111;
+}
+
+.btn-blue:hover {
+    background-color: #90c2f5;
+}
+
+.btn-red {
+    background-color: #e57373;
+    color: #fff;
+}
+
+.btn-red:hover {
+    background-color: #ef5350;
+}
+
+/* Pie de página (Footer) */
+.footer-bar {
+    background-color: #a8d0f8;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #92bce4;
+    font-size: 13px;
+    color: #222;
+    line-height: 1.5;
+}
