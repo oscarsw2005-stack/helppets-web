@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HelpPets - Solicitud de Cita</title>
-    <link rel="stylesheet" href="estilos/solicitud_cita.css">
+    <link rel="stylesheet" href="estilos_solicitud_cita.css">
 </head>
 <body class="bg-pattern">
 
@@ -28,36 +28,36 @@
                 
                 <form action="solicitud_cita_mensaje.html" method="POST">
                     
-                    <!-- Campo Mascota -->
+                    <!-- Campo Mascota (Obligatorio) -->
                     <div class="form-row">
                         <label for="mascota">MASCOTA:</label>
-                        <select id="mascota" class="form-select">
-                            <option value="">mascota</option>
+                        <select id="mascota" name="mascota" class="form-select" required>
+                            <option value="">Seleccione mascota</option>
                             <option value="toby">Toby</option>
                             <option value="firulais">Firulais</option>
                         </select>
                     </div>
 
-                    <!-- Tipo de Servicio (Botones de opción / radio con estilo) -->
+                    <!-- Tipo de Servicio (Botones de opción / radio obligatorios) -->
                     <div class="form-row">
                         <label>TIPO DE<br>SERVICIO:</label>
                         <div class="service-radio-group">
                             <label class="radio-btn-label">
-                                <input type="radio" name="tipo_servicio" value="medico" checked> 
+                                <input type="radio" name="tipo_servicio" value="medico" required> 
                                 <span>medico</span>
                             </label>
                             <label class="radio-btn-label">
-                                <input type="radio" name="tipo_servicio" value="peluqueria"> 
+                                <input type="radio" name="tipo_servicio" value="peluqueria" required> 
                                 <span>peluqueria</span>
                             </label>
                         </div>
                     </div>
 
-                    <!-- Fecha (Día / Mes / Año y Hora) -->
+                    <!-- Fecha / Horarios configurados por el administrador (Obligatorio) -->
                     <div class="form-row">
                         <label for="fecha">FECHA<br>(DIA / MES/AÑO Y HORA):</label>
-                        <select id="fecha" class="form-select">
-                            <option value="">Horarios</option>
+                        <select id="fecha" name="fecha" class="form-select" required>
+                            <option value="">Seleccione horario</option>
                             <option value="slot1">07/10/2026 - 10:00 AM</option>
                             <option value="slot2">08/10/2026 - 02:00 PM</option>
                         </select>
