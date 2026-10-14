@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Veterinaria</title>
+</head>
+<body>
+    <header>
+        <button type="button" aria-label="Buscar">🔍</button>
+        <img src="logo.png" alt="Logo veterinaria">
+        <h1>Panel Veterinario</h1>
+        <span>Dr. Brayan Cabrejo</span>
+        <button type="button">Cerrar Sesión</button>
+    </header>
+<main>
+    <section>
+    <h2>Agenda de atención</h2>
+    <select aria-label="Filtrar citas">
+        <option>Filtrar por Fecha</option>
+        <option>Hoy</option>
+        <option>Esta semana</option>
+        <option>Este mes</option>
+    </select>
+    <h3>Citas asignadas para hoy:</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Hora</th>
+            <th>Mascota</th>
+            <th>Motivo/Tipo</th>
+            <th>Estado</th>
+            <th>Acción</th>
+        </tr>
+        </thead>
+        <tbody>
+    <tr>
+            <td>10:00</td>
+            <td>Azos</td>
+            <td>Vacunación</td>
+            <td>Asignada</td>
+            <td><a href="#">Atender</a></td>
+        </tr>
+        <tr>
+            <td>12:30</td>
+            <td>Princesa</td>
+            <td>Consulta general</td>
+            <td>Asignada</td>
+            <td><a href="#">Atender</a></td>
+        </tr>
+        </tbody>
+    </table>
+    </section>
+    <section>
+    <h3>Buscar historial previo:</h3>
+    <form>
+        <label for="documento">Ingresa el documento del propietario para consultar historial clínico de la mascota:</label>
+        <input id="documento" type="text" value="101310****">
+        <button type="submit" aria-label="Buscar historial">🔍</button>
+    </form>
+    </section>
+</main>
+
+<footer>
+    <p>Contacto: info@veterinaria.com | Teléfono: 123-456-7890</p>
+</footer>
+
+
+
+
+</body>
+</html>
