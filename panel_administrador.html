@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpPets - Opciones Administrador</title>
+    <link rel="stylesheet" href="estilos/panel_administrador.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-pattern">
+
+    <!-- Contenedor principal tipo ventana de navegador -->
+    <div class="web-page-container">
+
+        <!-- Barra de Dirección del Navegador simulada -->
+        <div class="browser-address-bar">
+            <span class="browser-dots"></span>
+            <div class="browser-url-box">
+                <span class="browser-url">https://HelpPets.com</span>
+            </div>
+        </div>
+
+        <!-- Franja Superior Azul ("Opciones") -->
+        <header class="top-bar">
+            <div class="top-bar-title">
+                <i data-lucide="star" class="star-icon"></i>
+                <h1>Opciones</h1>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="content-layout">
+                
+                <div class="logo-section">
+                    <img 
+                        src="#" 
+                        alt="HelpPets Logo Perro y Gato" 
+                        class="pet-illustration"
+                    >
+                </div>
+
+                <!-- Sección derecha: Botones de opciones -->
+                <div class="options-menu">
+                    
+                    <a href="registrar_empleado.html" class="btn-option btn-blue">
+                        <i data-lucide="paw-print" class="btn-icon"></i>
+                        <span>Registrar nuevo empleado</span>
+                    </a>
+
+                    <a href="gestion_roles.html" class="btn-option btn-blue">
+                        <i data-lucide="paw-print" class="btn-icon"></i>
+                        <span>Gestion De Roles</span>
+                    </a>
+
+                    <a href="reportes.html" class="btn-option btn-light-blue">
+                        <i data-lucide="refresh-cw" class="btn-icon"></i>
+                        <span>Reportes</span>
+                    </a>
+
+                    <a href="horarios.html" class="btn-option btn-light-blue">
+                        <i data-lucide="paw-print" class="btn-icon"></i>
+                        <span>Horarios</span>
+                    </a>
+
+                    <a href="index.html" class="btn-option btn-red">
+                        <i data-lucide="lock" class="btn-icon"></i>
+                        <span>Cerrar sesión</span>
+                    </a>
+
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="footer-banner">
+            <p>Contacto: info@veterinaria.com | Teléfono: 123-456-7890</p>
+            <p>© 2023 Veterinaria. Todos los derechos reservados.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+/* RESET Y ESTILOS GENERALES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.bg-pattern {
+    background-color: #e5e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* CONTENEDOR PRINCIPAL TIPO VENTANA */
+.web-page-container {
+    background-color: #ffffff;
+    border: 2px solid #333333;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 950px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* FRANJA SUPERIOR GRIS */
+.top-bar {
+    background-color: #e2e8f0;
+    border-bottom: 2px solid #333333;
+    padding: 15px 25px;
+    text-align: center;
+}
+
+.options-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    letter-spacing: 0.5px;
+}
+
+/* CONTENIDO PRINCIPAL CON FONDO DE PUNTOS */
+.main-content {
+    background-color: #ffffff;
+    background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+    background-size: 25px 25px;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TARJETA DEL FORMULARIO */
+.form-card-container {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 580px;
+    padding: 40px 35px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* GRUPOS DE FORMULARIO */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #334155;
+    outline: none;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* GRUPO DE BOTONES */
+.button-group {
+    margin-top: 25px;
+}
+
+.button-group-secondary {
+    margin-top: 12px;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-volver {
+    display: block;
+    width: 100%;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.btn-volver:hover {
+    background-color: #1d4ed8;
+}
+
+/* ESTILOS DE LA TARJETA VERDE DE ÉXITO */
+.success-card-container {
+    background-color: #dcfce7;
+    border: 1px solid #86efac;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 580px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.success-heading {
+    font-size: 22px;
+    font-weight: bold;
+    color: #15803d;
+    margin-bottom: 15px;
+}
+
+.success-message {
+    font-size: 14px;
+    color: #334155;
+    margin-bottom: 35px;
+}

@@ -1,4 +1,6 @@
-/* RESET Y ESTILOS GENERALES */
+/* ==========================================
+   1. RESET Y ESTILOS GENERALES
+   ================================---------- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,155 +9,195 @@
 }
 
 body.bg-pattern {
-    background-color: #e5e7eb;
+    background-color: #cbd5e1;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    padding: 15px;
 }
 
-/* CONTENEDOR TIPO VENTANA DE NAVEGADOR / WIREFRAME */
+/* ==========================================
+   2. CONTENEDOR TIPO VENTANA
+   ================================---------- */
 .web-page-container {
     background-color: #ffffff;
     border: 2px solid #333333;
-    border-radius: 8px;
+    border-radius: 6px;
     width: 100%;
-    max-width: 950px;
+    max-width: 1000px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     overflow: hidden;
 }
 
-/* FRANJA SUPERIOR */
+/* ==========================================
+   3. BARRA DE NAVEGADOR SIMULADA
+   ================================---------- */
+.browser-address-bar {
+    background-color: #e2e8f0;
+    border-bottom: 2px solid #333333;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.browser-dots {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #94a3b8;
+    border-radius: 50%;
+    box-shadow: 18px 0 0 #94a3b8, 36px 0 0 #94a3b8;
+}
+
+.browser-url-box {
+    flex: 1;
+    max-width: 90%;
+    margin-left: 25px;
+}
+
+.browser-url {
+    display: block;
+    background-color: #ffffff;
+    border: 1px solid #333333;
+    border-radius: 15px;
+    padding: 3px 18px;
+    font-size: 13px;
+    color: #333333;
+    width: 100%;
+}
+
+/* ==========================================
+   4. FRANJA SUPERIOR AZUL ("Opciones")
+   ================================---------- */
 .top-bar {
     background-color: #93c5fd;
     border-bottom: 2px solid #333333;
-    padding: 15px 25px;
+    padding: 18px 30px;
 }
 
-.options-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #1e293b;
+.top-bar-title {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+}
+
+.top-bar-title h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e293b;
 }
 
 .star-icon {
-    font-size: 22px;
+    width: 22px;
+    height: 22px;
+    color: #1e293b;
 }
 
-/* CONTENIDO PRINCIPAL CON FONDO DE PUNTOS Y HUELLAS */
+/* ==========================================
+   5. CUERPO CENTRAL Y DISTRIBUCIÓN (IMAGEN GRANDE)
+   ================================---------- */
 .main-content {
     background-color: #ffffff;
     background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
     background-size: 30px 30px;
-    padding: 40px 50px;
+    padding: 40px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.content-wrapper {
+.content-layout {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 900px;
     gap: 40px;
 }
 
-/* SECCIÓN DEL LOGO (PERRO Y GATO CON CRUZ) */
+/* ==========================================
+   6. SECCIÓN DE LA IMAGEN GRANDE
+   ================================---------- */
 .logo-section {
-    flex: 1;
+    flex: 1.2;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.logo-placeholder {
-    width: 280px;
-    height: 280px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.pet-logo-large {
+    width: 100%;
+    max-width: 360px; /* Tamaño grande y proporcionado como en el wireframe */
+    height: auto;
+    object-fit: contain;
+    display: block;
 }
 
-.animal-silhouette {
-    width: 240px;
-    height: 240px;
-    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-    border-radius: 50% 40% 60% 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    box-shadow: 0 8px 20px rgba(3, 105, 161, 0.3);
-}
-
-.cross-badge {
-    background-color: #ffffff;
-    color: #0284c7;
-    font-size: 32px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* SECCIÓN DE BOTONES DE OPCIONES */
-.menu-options {
+/* ==========================================
+   7. MENÚ DE OPCIONES (BOTONES)
+   ================================---------- */
+.options-menu {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    max-width: 350px;
+    gap: 12px;
+    max-width: 280px;
+    width: 100%;
 }
 
-.btn-menu {
+.btn-option {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    background-color: #bfdbfe;
-    color: #1e3a8a;
-    text-decoration: none;
-    padding: 12px 20px;
-    border: 1.5px solid #3b82f6;
+    gap: 10px;
+    padding: 11px 18px;
+    border: 1.5px solid #333333;
     border-radius: 6px;
-    font-size: 15px;
+    text-decoration: none;
+    font-size: 14px;
     font-weight: 600;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    transition: all 0.2s ease;
+    color: #1e293b;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    transition: transform 0.1s ease, filter 0.2s ease;
 }
 
-.btn-menu:hover {
+.btn-option:hover {
+    transform: translateY(-1px);
+    filter: brightness(0.96);
+}
+
+.btn-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Colores de los botones */
+.btn-blue {
     background-color: #93c5fd;
-    transform: translateY(-2px);
 }
 
-/* BOTÓN ESPECIAL DE CERRAR SESIÓN */
-.btn-menu.btn-danger {
+.btn-light-blue {
+    background-color: #bfdbfe;
+}
+
+.btn-red {
     background-color: #f87171;
     color: #ffffff;
-    border-color: #ef4444;
 }
 
-.btn-menu.btn-danger:hover {
-    background-color: #ef4444;
-}
-
-.icon {
-    font-size: 16px;
-}
-
-/* FRANJA INFERIOR (PIE DE PÁGINA) */
-.footer-bar {
+/* ==========================================
+   8. PIE DE PÁGINA
+   ================================---------- */
+.footer-banner {
     background-color: #93c5fd;
     border-top: 2px solid #333333;
+    padding: 12px;
     text-align: center;
-    padding: 15px;
-    font-size: 12px;
+    font-size: 13px;
     color: #1e293b;
-    line-height: 1.5;
+    line-height: 1.4;
 }

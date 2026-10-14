@@ -7,7 +7,7 @@
 }
 
 body.bg-pattern {
-    background-color: #f1f5f9;
+    background-color: #e5e7eb;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,12 +31,14 @@ body.bg-pattern {
     background-color: #e2e8f0;
     border-bottom: 2px solid #333333;
     padding: 15px 25px;
+    text-align: center;
 }
 
 .options-title {
     font-size: 16px;
     font-weight: 600;
     color: #1e293b;
+    letter-spacing: 0.5px;
 }
 
 /* CONTENIDO PRINCIPAL CON FONDO DE PUNTOS */
@@ -44,7 +46,7 @@ body.bg-pattern {
     background-color: #ffffff;
     background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
     background-size: 25px 25px;
-    padding: 50px 20px;
+    padding: 60px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,73 +55,72 @@ body.bg-pattern {
 /* TARJETA DEL FORMULARIO */
 .form-card-container {
     background-color: #ffffff;
-    border: 1.5px solid #cbd5e1;
-    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
     width: 100%;
-    max-width: 500px;
-    padding: 35px 40px;
+    max-width: 520px;
+    padding: 40px 35px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* TÍTULO DEL FORMULARIO */
 .form-heading {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    color: #1f2937;
-    margin-bottom: 25px;
+    color: #1e293b;
     text-align: center;
+    margin-bottom: 25px;
 }
 
-/* CAMPOS DE ENTRADA */
+/* GRUPOS DE FORMULARIO */
 .form-group {
     margin-bottom: 18px;
-    text-align: left;
 }
 
 .form-group label {
     display: block;
     font-size: 14px;
     font-weight: 600;
-    color: #374151;
+    color: #334155;
     margin-bottom: 6px;
 }
 
 .form-group input {
     width: 100%;
     padding: 10px 12px;
-    border: 1px solid #9ca3af;
+    border: 1px solid #cbd5e1;
     border-radius: 4px;
     font-size: 14px;
-    color: #1f2937;
+    color: #334155;
     outline: none;
-    background-color: #ffffff;
+    transition: border-color 0.2s ease;
 }
 
 .form-group input:focus {
     border-color: #2563eb;
-    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
 }
 
 /* GRUPO DE BOTONES */
 .button-group {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 12px;
-    margin-top: 28px;
+    margin-top: 30px;
 }
 
-/* BOTÓN GUARDAR CAMBIOS */
 .btn-submit {
+    display: block;
     width: 100%;
     background-color: #2563eb;
     color: #ffffff;
     border: none;
-    padding: 11px;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px;
     border-radius: 6px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.2s ease;
 }
 
@@ -127,20 +128,46 @@ body.bg-pattern {
     background-color: #1d4ed8;
 }
 
-/* BOTÓN VOLVER AL PANEL */
 .btn-volver {
+    display: block;
     width: 100%;
     background-color: #2563eb;
     color: #ffffff;
     text-decoration: none;
     text-align: center;
-    padding: 10px;
+    padding: 12px;
     border-radius: 6px;
     font-size: 14px;
     font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.2s ease;
 }
 
 .btn-volver:hover {
     background-color: #1d4ed8;
+}
+
+/* ESTILOS DE LA TARJETA VERDE DE ÉXITO (IGUAL A TU IMAGEN) */
+.success-card-container {
+    background-color: #dcfce7; /* Fondo verde claro idéntico a tu referencia */
+    border: 1px solid #86efac;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 580px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.success-heading {
+    font-size: 22px;
+    font-weight: bold;
+    color: #15803d; /* Título en verde oscuro */
+    margin-bottom: 15px;
+}
+
+.success-message {
+    font-size: 14px;
+    color: #334155;
+    margin-bottom: 35px;
 }
