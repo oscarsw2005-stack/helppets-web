@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (
+    empty($_SESSION['id_usuario'])
+    || !isset($_SESSION['rol'])
+    || strcasecmp($_SESSION['rol'], 'Cliente') !== 0
+) {
+    header('Location: index.html');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -53,7 +65,7 @@
                         <span>Registrar mascota</span>
                     </a>
 
-                    <a href="index.html" class="btn-option btn-red">
+                    <a href="logout.php" class="btn-option btn-red">
                         <i data-lucide="lock" class="btn-icon"></i>
                         <span>Cerrar sesión</span>
                     </a>

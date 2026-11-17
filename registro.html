@@ -33,51 +33,46 @@
 
                 <h2 class="form-heading">Registrarse</h2>
 
-                <form action="Registro_mensaje.html" method="POST">
+                <form action="registrar_usuario.php" method="POST">
                     
                     <div class="form-group">
                         <label for="nombres">Nombres</label>
-                        <input type="text" id="nombres" placeholder="Oscar Daniel" required>
+                        <input type="text" id="nombres" name="nombres" placeholder="Oscar Daniel" maxlength="100" required>
                     </div>
 
                     <div class="form-group">
                         <label for="apellidos">Apellidos</label>
-                        <input type="text" id="apellidos" placeholder="Hernández Rojas" required>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Hernández Rojas" maxlength="100" required>
                     </div>
 
                     <div class="form-group">
                         <label for="correo">Correo</label>
-                        <input type="email" id="correo" placeholder="petito@hotmail.com" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="tipo_documento">Tipo de documento</label>
-                        <select id="tipo_documento">
-                            <option value="combobox" selected>Tipo de documento</option>
-                            <option value="cc">Cédula de Ciudadanía</option>
-                            <option value="ce">Cédula de Extranjería</option>
-                            <option value="ce">Tarjeta de identidad</option>
-                        </select>
+                        <input type="email" id="correo" name="correo" placeholder="petito@hotmail.com" maxlength="100" required>
                     </div>
 
                     <div class="form-group">
                         <label for="documento">Documento</label>
-                        <input type="text" id="documento" placeholder="1021901" required>
+                        <input type="text" id="documento" name="documento" placeholder="1021901" maxlength="20" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="3001234567" maxlength="20" required>
                     </div>
 
                     <div class="form-group">
                         <label for="direccion">Direccion</label>
-                        <input type="text" id="direccion" placeholder="cra 108 55b 16" required>
+                        <input type="text" id="direccion" name="direccion" placeholder="cra 108 55b 16" maxlength="100" required>
                     </div>
 
                     <div class="form-group">
                         <label for="contrasena">Contraseña</label>
-                        <input type="password" id="contrasena" placeholder="******" required>
+                        <input type="password" id="contrasena" name="contrasena" placeholder="Mínimo 8 caracteres" minlength="8" required>
                     </div>
 
                     <div class="form-group">
                         <label for="confirmar_contrasena">Confirmar contraseña</label>
-                        <input type="password" id="confirmar_contrasena" placeholder="******" required>
+                        <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" placeholder="******" minlength="8" required>
                     </div>
 
                     <button type="submit" class="btn-submit">Registrar</button>

@@ -84,7 +84,7 @@ $stmt->close();
 
         <!-- Cabecera superior con el Botón "Volver al panel" -->
         <div class="top-action-bar">
-            <a href="panel_cliente.html" class="btn-volver-panel">Volver al panel</a>
+            <a href="panel_cliente.php" class="btn-volver-panel">Volver al panel</a>
         </div>
 
         <!-- Título principal -->
