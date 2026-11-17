@@ -1,0 +1,9 @@
+@import url("base.css");
+
+.form-card-container {
+    max-width: 620px;
+}
+
+.success-card-container {
+    max-width: 580px;
+}
