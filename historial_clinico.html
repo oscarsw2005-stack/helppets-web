@@ -11,17 +11,15 @@
     <!-- Contenedor principal estilo ventana de navegador -->
     <div class="web-page-container">
 
-        <!-- Cabecera superior con el Botón "Volver al panel" -->
-        <div class="top-action-bar">
-            <a href="panel_cliente.html" class="btn-volver-panel">Volver al panel</a>
-        </div>
-
-        <!-- Título principal -->
-        <header class="title-bar">
-            <h1 class="main-title">HISTORIAL CLINICO</h1>
+        <header class="top-bar history-header">
+            <div class="history-heading">
+                <span class="history-eyebrow">HELPPETS · CUIDADO Y BIENESTAR</span>
+                <h1 class="main-title">Historial clínico</h1>
+                <p>Consulta las visitas, indicaciones y cuidados de tus mascotas.</p>
+            </div>
+            <a href="panel_cliente.html" class="history-back-link">Volver al panel</a>
         </header>
 
-        <!-- Contenido principal con la tabla de historial -->
         <main class="main-content">
             <div class="table-container">
                 <table class="clinical-table">
@@ -44,7 +42,7 @@
                                 </select>
                             </th>
                             <th>
-                                receta y cuidados 
+                                Receta y cuidados
                                 <select class="filter-select" aria-label="Filtrar por Receta y cuidados">
                                     <option value="">▼</option>
                                     <option value="antibiotico">Antibiótico</option>
@@ -52,7 +50,7 @@
                                 </select>
                             </th>
                             <th>
-                                Vacunas y desparasitantes 
+                                Vacunas y desparasitantes
                                 <select class="filter-select" aria-label="Filtrar por Vacunas y desparasitantes">
                                     <option value="">▼</option>
                                     <option value="rabia">Rabia</option>
@@ -70,21 +68,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="data-sample">nombre, edad, raza, peso</td>
-                            <td class="data-sample">dia/mes/año HORA</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr class="empty-row">
+                            <td colspan="5">
+                                <div class="empty-state">
+                                    <span class="empty-state-icon" aria-hidden="true">+</span>
+                                    <h2>Aún no hay registros clínicos</h2>
+                                    <p>Cuando tu mascota tenga una consulta, aquí encontrarás su historial e indicaciones.</p>
+                                </div>
+                            </td>
                         </tr>
-                        <!-- Filas de relleno vacías para imitar el diseño de wireframe -->
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
-                        <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
                     </tbody>
                 </table>
             </div>

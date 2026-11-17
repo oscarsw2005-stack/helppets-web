@@ -7,3 +7,29 @@
 .button-container .btn-submit {
     min-width: 180px;
 }
+
+.button-container {
+    display: grid;
+    gap: 12px;
+}
+
+.button-container .btn-panel-back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 18px;
+    color: #0756a8;
+    background: #f2f7ff;
+    border: 1px solid #d4e1f1;
+    border-radius: 11px;
+    font-size: 14px;
+    font-weight: 650;
+    text-decoration: none;
+    transition: background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.button-container .btn-panel-back:hover {
+    background: #e7f2ff;
+    border-color: #a9c8ec;
+}
