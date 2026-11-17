@@ -12,10 +12,12 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || $documento === '' || $contrasena ==
     $mensaje = 'Ingresa tu documento y contraseña para iniciar sesión.';
 } else {
     $consulta = $conexion->prepare(
-        'SELECT u.id_usuario, u.contrasena, r.nombre_rol
+        'SELECT u.id_usuario, u.contrasena, r.nombre_rol,
+                (c.idCliente IS NOT NULL) AS es_cliente
          FROM usuario u
-         INNER JOIN rol r ON r.id_rol = u.rol_id_rol
-         WHERE u.documento = ?
+         LEFT JOIN rol r ON r.id_rol = u.rol_id_rol
+         LEFT JOIN cliente c ON c.usuario_id_usuario = u.id_usuario
+         WHERE TRIM(u.documento) = ?
          LIMIT 1'
     );
     $consulta->bind_param('s', $documento);
@@ -26,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || $documento === '' || $contrasena ==
 
     if (!$usuario) {
         $codigoEstado = 404;
-        $mensaje = 'No encontramos una cuenta con ese documento. Regístrate para crear una.';
+        $mensaje = 'No encontramos ese documento en la base veterinaria. Verifica que XAMPP use la base correcta; si no tienes cuenta, regístrate.';
     } elseif (
         !password_verify($contrasena, $usuario['contrasena'])
         && !hash_equals((string) $usuario['contrasena'], $contrasena)
@@ -36,14 +38,17 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || $documento === '' || $contrasena ==
     } else {
         session_regenerate_id(true);
         $_SESSION['id_usuario'] = (int) $usuario['id_usuario'];
-        $_SESSION['rol'] = $usuario['nombre_rol'];
+        $nombreRol = trim((string) $usuario['nombre_rol']);
+        $esCliente = (bool) $usuario['es_cliente']
+            || strcasecmp($nombreRol, 'Cliente') === 0;
+        $_SESSION['rol'] = $esCliente ? 'Cliente' : $nombreRol;
 
-        if (strcasecmp($usuario['nombre_rol'], 'Cliente') === 0) {
+        if ($esCliente) {
             header('Location: panel_cliente.php');
             exit;
         }
 
-        if (strcasecmp($usuario['nombre_rol'], 'Administrador') === 0) {
+        if (strcasecmp($nombreRol, 'Administrador') === 0) {
             header('Location: panel_administrador.html');
             exit;
         }
