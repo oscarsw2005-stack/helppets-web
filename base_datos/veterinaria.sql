@@ -65,11 +65,13 @@ CREATE TABLE IF NOT EXISTS raza (
 CREATE TABLE IF NOT EXISTS mascota (
     idmascota INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(45) NOT NULL,
-    sexo VARCHAR(20) NOT NULL,
-    observaciones TEXT NOT NULL,
-    raza_idraza INT NOT NULL,
+    raza VARCHAR(45) NOT NULL,
+    especie VARCHAR(45) NOT NULL,
+    sexo VARCHAR(45) NOT NULL,
+    peso DECIMAL(5,2) NOT NULL,
+    observaciones VARCHAR(45) NOT NULL,
+    datos_extra TEXT NULL,
     Cliente_idCliente INT NOT NULL,
-    CONSTRAINT fk_mascota_raza FOREIGN KEY (raza_idraza) REFERENCES raza(idraza),
     CONSTRAINT fk_mascota_cliente FOREIGN KEY (Cliente_idCliente) REFERENCES cliente(idCliente)
 );
 
