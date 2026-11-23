@@ -34,10 +34,10 @@
 
 .pet-illustration {
     display: block;
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    object-fit: contain;
+    width: min(100%, 350px);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
     filter: drop-shadow(0 16px 18px rgba(17, 58, 112, 0.12));
     animation: gentle-float 6s ease-in-out infinite;
 }
@@ -120,7 +120,7 @@
     }
 
     .pet-illustration {
-        max-width: 260px;
+        width: min(100%, 260px);
     }
 
     .logo-section::before {
