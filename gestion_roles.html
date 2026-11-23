@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Roles - Veterinaria</title>
+    <link rel="stylesheet" href="estilos/estilo_roles.css">
+    <link rel="stylesheet" href="estilos/estilo_roles.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <i class="fa-regular fa-star"></i>
+            <span>Gestión de Roles</span>
+        </div>
+        <div class="navbar-actions">
+            <a href="opciones_admin.html" class="nav-btn btn-back">Volver</a>
+            <a href="logout.php" class="nav-btn btn-logout-top">Cerrar sesión</a>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+
+        <!-- Columna Izquierda: Logo -->
+        <section class="logo-section">
+            <div class="logo-circle">
+                <img src="estilos/veterinaria.webp" alt="Logo Veterinaria">
+            </div>
+        </section>
+
+        <!-- Columna Derecha: Tarjeta de Gestión de Roles -->
+        <section class="roles-section">
+            <form action="guardar_roles.php" method="POST" class="roles-card">
+                <div class="card-header">
+                    <h1>Gestión de Roles</h1>
+                    <p>Asignación de roles y permisos para el personal.</p>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="roles-table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Rol / Cargo</th>
+                                <th>Permisos</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Empleado 1 -->
+                            <tr>
+                                <td class="emp-name">Carlos Gómez</td>
+                                <td>
+                                    <select name="rol_1" class="role-select">
+                                        <option value="Veterinario/a" selected>Veterinario/a</option>
+                                        <option value="Recepcionista">Recepcionista</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <div class="permissions-list">
+                                        <label><input type="checkbox" name="permisos_1[]" value="acceso_total" checked> Acceso Total</label>
+                                        <label><input type="checkbox" name="permisos_1[]" value="citas" checked> Citas</label>
+                                        <label><input type="checkbox" name="permisos_1[]" value="historiales" checked> Historiales</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="status-badge status-active">Activo</span>
+                                </td>
+                            </tr>
+
+                            <!-- Empleado 2 -->
+                            <tr>
+                                <td class="emp-name">Ana Martínez</td>
+                                <td>
+                                    <select name="rol_2" class="role-select">
+                                        <option value="Veterinario/a">Veterinario/a</option>
+                                        <option value="Recepcionista" selected>Recepcionista</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <div class="permissions-list">
+                                        <label><input type="checkbox" name="permisos_2[]" value="acceso_total"> Acceso Total</label>
+                                        <label><input type="checkbox" name="permisos_2[]" value="citas" checked> Citas</label>
+                                        <label><input type="checkbox" name="permisos_2[]" value="historiales"> Historiales</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="status-badge status-active">Activo</span>
+                                </td>
+                            </tr>
+
+                            <!-- Empleado 3 -->
+                            <tr>
+                                <td class="emp-name">Luis Rodríguez</td>
+                                <td>
+                                    <select name="rol_3" class="role-select">
+                                        <option value="Veterinario/a" selected>Veterinario/a</option>
+                                        <option value="Recepcionista">Recepcionista</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <div class="permissions-list">
+                                        <label><input type="checkbox" name="permisos_3[]" value="acceso_total"> Acceso Total</label>
+                                        <label><input type="checkbox" name="permisos_3[]" value="citas"> Citas</label>
+                                        <label><input type="checkbox" name="permisos_3[]" value="historiales" checked> Historiales</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="status-badge status-active">Activo</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Guardar Cambios</button>
+                    <a href="opciones_admin.html" class="btn-cancel">Cancelar</a>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <p>Contacto: info@veterinaria.com | Teléfono: 123-456-7890</p>
+        <p>© 2023 Veterinaria. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

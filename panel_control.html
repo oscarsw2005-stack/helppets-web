@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control (Dashboard) - Veterinaria</title>
+    <link rel="stylesheet" href="estilos_dashboard.css">
+    <link rel="stylesheet" href="estilos/estilo_panel.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <i class="fa-solid fa-star"></i>
+            <span>Panel de Control (Dashboard) - Opciones de Administrador</span>
+        </div>
+        <div class="navbar-actions">
+            <a href="opciones_admin.html" class="nav-btn btn-back">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Volver</span>
+            </a>
+            <a href="logout.php" class="nav-btn btn-logout-top">
+                <span>Cerrar sesión</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="dashboard-container">
+
+        <!-- Logo y Título de Sección -->
+        <section class="dashboard-header">
+            <div class="logo-badge">
+                <img src="logo_veterinaria.png" alt="Logo Veterinaria">
+            </div>
+            <h1>Resumen de Hoy</h1>
+        </section>
+
+        <!-- Tarjetas de Métricas (KPIs) -->
+        <section class="kpi-grid">
+            <article class="kpi-card">
+                <div class="kpi-info">
+                    <span class="kpi-title">Citas para Hoy</span>
+                    <strong class="kpi-value">18</strong>
+                </div>
+                <div class="kpi-icon">
+                    <i class="fa-regular fa-calendar"></i>
+                </div>
+            </article>
+
+            <article class="kpi-card">
+                <div class="kpi-info">
+                    <span class="kpi-title">Pacientes Atendidos</span>
+                    <strong class="kpi-value">12</strong>
+                </div>
+            </article>
+
+            <article class="kpi-card">
+                <div class="kpi-info">
+                    <span class="kpi-title">Ingresos del Día</span>
+                    <strong class="kpi-value">$345.000</strong>
+                </div>
+            </article>
+
+            <article class="kpi-card">
+                <div class="kpi-info">
+                    <span class="kpi-title">Nuevos Registros</span>
+                    <strong class="kpi-value">5</strong>
+                </div>
+            </article>
+        </section>
+
+        <!-- Sección Inferior: Tabla de Citas, Estadísticas y Alertas -->
+        <section class="bottom-grid">
+
+            <!-- Tabla: Citas Próximas -->
+            <div class="panel-card appointments-card">
+                <h2>Citas Próximas</h2>
+                <div class="table-responsive">
+                    <table class="appointments-table">
+                        <thead>
+                            <tr>
+                                <th>Hora</th>
+                                <th>Mascota / Paciente</th>
+                                <th>Dueño</th>
+                                <th>Servicio</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12:00 PM</td>
+                                <td>Toby</td>
+                                <td>Carlos Gómez</td>
+                                <td>Consulta General</td>
+                                <td><span class="badge badge-confirmed">Confirmado</span></td>
+                            </tr>
+                            <tr>
+                                <td>12:30 PM</td>
+                                <td>Luna</td>
+                                <td>Laura Martínez</td>
+                                <td>Vacunación</td>
+                                <td><span class="badge badge-pending">Pendiente</span></td>
+                            </tr>
+                            <tr>
+                                <td>02:00 PM</td>
+                                <td>Max</td>
+                                <td>Andrés Rojas</td>
+                                <td>Consulta General</td>
+                                <td><span class="badge badge-pending">Pendiente</span></td>
+                            </tr>
+                            <tr>
+                                <td>03:30 PM</td>
+                                <td>Mia</td>
+                                <td>Sofía Torres</td>
+                                <td>Vacunación</td>
+                                <td><span class="badge badge-pending">Pendiente</span></td>
+                            </tr>
+                            <tr>
+                                <td>04:15 PM</td>
+                                <td>Rocky</td>
+                                <td>Juan Pérez</td>
+                                <td>Consulta General</td>
+                                <td><span class="badge badge-confirmed">Confirmado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Gráfico: Estadísticas de la Semana -->
+            <div class="panel-card stats-card">
+                <h2>Estadísticas de la Semana</h2>
+                <div class="chart-container">
+                    <svg viewBox="0 0 260 180" class="weekly-chart" aria-label="Gráfico de barras y tendencia semanal">
+                        <!-- Barras -->
+                        <rect x="20" y="135" width="22" height="35" rx="3" fill="#89c4e1" />
+                        <rect x="55" y="110" width="22" height="60" rx="3" fill="#63b0d6" />
+                        <rect x="90" y="80" width="22" height="90" rx="3" fill="#89c4e1" />
+                        <rect x="125" y="105" width="22" height="65" rx="3" fill="#63b0d6" />
+                        <rect x="160" y="60" width="22" height="110" rx="3" fill="#89c4e1" />
+                        <rect x="195" y="25" width="22" height="145" rx="3" fill="#4699c2" />
+                        <rect x="230" y="85" width="22" height="85" rx="3" fill="#89c4e1" />
+                        <!-- Línea de tendencia -->
+                        <polyline fill="none" stroke="#186499" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"
+                            points="31,130 66,105 101,75 136,100 171,55 206,20 241,80" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Alertas del Sistema -->
+            <div class="panel-card alerts-card">
+                <h2>Alertas del Sistema</h2>
+                <div class="alerts-list">
+                    <a href="inventario_servicios.php" class="alert-btn">
+                        Inventario Bajo (Vacunas)
+                    </a>
+                    <a href="administrar_citas.php" class="alert-btn">
+                        3 Citas por Confirmar
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <p>Contacto: info@veterinaria.com | Teléfono: 123-456-7890</p>
+        <p>© 2023 Veterinaria. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

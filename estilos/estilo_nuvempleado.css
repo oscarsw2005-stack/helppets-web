@@ -1,0 +1,251 @@
+/* Reinicio y tipografía base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #eef5fa;
+    /* Patrón de huellas en el fondo generado con SVG integrado */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='%23b5d6eb' fill-opacity='0.45'%3E%3Cg transform='translate(20, 20) rotate(-15)'%3E%3Cellipse cx='15' cy='22' rx='9' ry='7'/%3E%3Cellipse cx='6' cy='11' rx='3.5' ry='4.5' transform='rotate(-20 6 11)'/%3E%3Cellipse cx='12' cy='7' rx='3.5' ry='4.5'/%3E%3Cellipse cx='19' cy='7' rx='3.5' ry='4.5'/%3E%3Cellipse cx='24' cy='12' rx='3.5' ry='4.5' transform='rotate(20 24 12)'/%3E%3C/g%3E%3Cg transform='translate(100, 100) rotate(15)'%3E%3Cellipse cx='15' cy='22' rx='9' ry='7'/%3E%3Cellipse cx='6' cy='11' rx='3.5' ry='4.5' transform='rotate(-20 6 11)'/%3E%3Cellipse cx='12' cy='7' rx='3.5' ry='4.5'/%3E%3Cellipse cx='19' cy='7' rx='3.5' ry='4.5'/%3E%3Cellipse cx='24' cy='12' rx='3.5' ry='4.5' transform='rotate(20 24 12)'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    color: #162436;
+}
+
+/* Barra Superior */
+.navbar {
+    background: linear-gradient(90deg, #003893 0%, #0056b3 65%, #009bb5 100%);
+    color: #ffffff;
+    padding: 13px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar::after {
+    content: '';
+    position: absolute;
+    right: 140px;
+    top: -45px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 18px solid rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.08rem;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.navbar-brand i {
+    font-size: 1rem;
+    color: #9be7ff;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1;
+}
+
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.84rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-back {
+    background-color: #ffffff;
+    color: #0b2545;
+}
+
+.btn-back:hover {
+    background-color: #f0f6fc;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-logout-top {
+    background-color: #f4d6d9;
+    color: #b02a37;
+    border: 1px solid #e2b4b8;
+}
+
+.btn-logout-top:hover {
+    background-color: #ecc5c9;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(176, 42, 55, 0.2);
+}
+
+/* Contenedor Principal (2 Columnas) */
+.main-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 110px;
+    padding: 36px 24px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Columna Izquierda: Logo */
+.logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-circle {
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, rgba(226, 243, 252, 0.9), rgba(188, 223, 242, 0.65));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    box-shadow: 0 8px 24px rgba(0, 56, 147, 0.08);
+}
+
+.logo-circle img {
+    max-width: 88%;
+    max-height: 88%;
+    object-fit: contain;
+}
+
+/* Columna Derecha: Tarjeta del Formulario */
+.form-section {
+    width: 100%;
+    max-width: 390px;
+}
+
+.employee-form {
+    background-color: #f8fbfe;
+    border: 1px solid rgba(190, 214, 232, 0.9);
+    border-radius: 16px;
+    padding: 24px 26px;
+    box-shadow: 0 8px 24px rgba(0, 45, 110, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #162436;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 9px 12px;
+    font-size: 0.86rem;
+    color: #1e2f44;
+    background-color: #ffffff;
+    border: 1px solid #9ab2c7;
+    border-radius: 7px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #7c8d9e;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #0066b2;
+    box-shadow: 0 0 0 3px rgba(0, 102, 178, 0.14);
+}
+
+/* Botones del Formulario */
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.btn-submit {
+    padding: 9px 18px;
+    background: linear-gradient(180deg, #0068b8 0%, #004e92 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 78, 146, 0.22);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-submit:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.06);
+    box-shadow: 0 5px 12px rgba(0, 78, 146, 0.28);
+}
+
+.btn-cancel {
+    padding: 8px 18px;
+    background-color: #ffffff;
+    color: #1e2f44;
+    border: 1px solid #b8c9d9;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-cancel:hover {
+    background-color: #f0f6fc;
+    border-color: #9ab2c7;
+    transform: translateY(-1px);
+}
+
+/* Pie de Página */
+.footer {
+    background: linear-gradient(90deg, #002b75 0%, #004494 65%, #007c91 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 13px 20px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    width: 100%;
+    margin-top: auto; /* Ayuda a mantenerlo al fondo si el body tiene display: flex; flex-direction: column; */
+}
+
+.footer p {
+    margin: 0;
+}

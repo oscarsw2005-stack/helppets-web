@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opciones de Administrador - Veterinaria</title>
+    <!-- Enlace a tu hoja de estilos CSS -->
+    <link rel="stylesheet" href="estilos_administrador.css">
+    <link rel="stylesheet" href="estilos/estilo_administrador.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <i data-lucide="star" class="navbar-icon"></i>
+            <span>Opciones de Administrador</span>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+        
+        <!-- Columna Izquierda: Logo Circular -->
+        <section class="logo-section">
+            <div class="logo-circle">
+                <img src="estilos/veterinaria.webp" alt="Logo Veterinaria">
+            </div>
+        </section>
+
+        <!-- Columna Derecha: Botones de Opciones -->
+        <section class="options-section">
+            <nav class="options-menu">
+                <a href="opcion_panel_control.html" class="option-btn">
+                    <i data-lucide="layout-dashboard" class="btn-icon"></i>
+                    <span>Panel de control</span>
+                </a>
+
+                <a href="registrar_empleado.html" class="option-btn">
+                    <i data-lucide="paw-print" class="btn-icon"></i>
+                    <span>Registrar nuevo empleado</span>
+                </a>
+
+                <a href="gestionar_usuarios.php" class="option-btn">
+                    <i data-lucide="paw-print" class="btn-icon"></i>
+                    <span>Gestion De Roles</span>
+                </a>
+
+                <a href="reportes_auditoria.php" class="option-btn">
+                    <i data-lucide="refresh-cw" class="btn-icon"></i>
+                    <span>Reportes</span>
+                </a>
+
+                <a href="administrar_citas.php" class="option-btn">
+                    <i data-lucide="paw-print" class="btn-icon"></i>
+                    <span>Horarios</span>
+                </a>
+
+                <a href="logout.php" class="option-btn btn-logout">
+                    <i data-lucide="lock" class="btn-icon"></i>
+                    <span>Cerrar sesión</span>
+                </a>
+            </nav>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <p>Contacto: info@veterinaria.com | Teléfono: 123-456-7890</p>
+        <p>© 2023 Veterinaria. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

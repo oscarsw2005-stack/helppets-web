@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Nuevo Empleado - Veterinaria</title>
+    <link rel="stylesheet" href="estilos_registro_empleado.css">
+    <link rel="stylesheet" href="estilos/estilo_nuvempleado.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <i class="fa-regular fa-star"></i>
+            <span>Registrar Nuevo Empleado</span>
+        </div>
+        <div class="navbar-actions">
+            <a href="opciones_admin.html" class="nav-btn btn-back">Volver</a>
+            <a href="logout.php" class="nav-btn btn-logout-top">Cerrar sesión</a>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+
+        <!-- Columna Izquierda: Logo -->
+        <section class="logo-section">
+            <div class="logo-circle">
+                <img src="estilos/veterinaria.webp" alt="Logo Veterinaria">
+            </div>
+        </section>
+
+        <!-- Columna Derecha: Formulario de Registro -->
+        <section class="form-section">
+            <form action="guardar_empleado.php" method="POST" class="employee-form">
+
+                <div class="form-group">
+                    <label for="nombre_completo">Nombre Completo</label>
+                    <input type="text" id="nombre_completo" name="nombre_completo" placeholder="Nombre Completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="documento_identidad">Documento de Identidad</label>
+                    <input type="text" id="documento_identidad" name="documento_identidad" placeholder="Documento de Identidad" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo_electronico">Correo Electrónico</label>
+                    <input type="email" id="correo_electronico" name="correo_electronico" placeholder="Correo Electrónico" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="rol_cargo">Rol / Cargo</label>
+                    <select id="rol_cargo" name="rol_cargo" required>
+                        <option value="Veterinario/a">Veterinario/a</option>
+                        <option value="Recepcionista" selected>Recepcionista</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="contrasena_temporal">Contraseña Temporal</label>
+                    <input type="password" id="contrasena_temporal" name="contrasena_temporal" placeholder="Contraseña Temporal" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Registrar Empleado</button>
+                    <a href="opciones_admin.html" class="btn-cancel">Cancelar</a>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <p>Contacto: info@veterinaria.com | Teléfono: 123-456-7890</p>
+        <p>© 2023 Veterinaria. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
