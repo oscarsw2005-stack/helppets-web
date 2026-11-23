@@ -1,203 +1,143 @@
-/* ==========================================
-   1. RESET Y ESTILOS GENERALES
-   ================================---------- */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+@import url("base.css");
 
 body.bg-pattern {
-    background-color: #cbd5e1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 15px;
+    align-items: stretch;
+    padding: 0;
 }
 
-/* ==========================================
-   2. CONTENEDOR TIPO VENTANA
-   ================================---------- */
 .web-page-container {
-    background-color: #ffffff;
-    border: 2px solid #333333;
-    border-radius: 6px;
-    width: 100%;
-    max-width: 1000px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
-}
-
-/* ==========================================
-   3. BARRA DE NAVEGADOR SIMULADA
-   ================================---------- */
-.browser-address-bar {
-    background-color: #e2e8f0;
-    border-bottom: 2px solid #333333;
-    padding: 8px 15px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.browser-dots {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    background-color: #94a3b8;
-    border-radius: 50%;
-    box-shadow: 18px 0 0 #94a3b8, 36px 0 0 #94a3b8;
-}
-
-.browser-url-box {
-    flex: 1;
-    max-width: 90%;
-    margin-left: 25px;
-}
-
-.browser-url {
-    display: block;
-    background-color: #ffffff;
-    border: 1px solid #333333;
-    border-radius: 15px;
-    padding: 3px 18px;
-    font-size: 13px;
-    color: #333333;
-    width: 100%;
-}
-
-/* ==========================================
-   4. FRANJA SUPERIOR AZUL ("Opciones")
-   ================================---------- */
-.top-bar {
-    background-color: #93c5fd;
-    border-bottom: 2px solid #333333;
-    padding: 18px 30px;
-}
-
-.top-bar-title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.top-bar-title h1 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #1e293b;
-}
-
-.star-icon {
-    width: 22px;
-    height: 22px;
-    color: #1e293b;
-}
-
-/* ==========================================
-   5. CUERPO CENTRAL Y DISTRIBUCIÓN (IMAGEN GRANDE)
-   ================================---------- */
-.main-content {
-    background-color: #ffffff;
-    background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
-    background-size: 30px 30px;
-    padding: 40px 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    max-width: none;
+    min-height: 100vh;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .content-layout {
+    position: relative;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: clamp(48px, 10vw, 140px);
     width: 100%;
-    max-width: 900px;
-    gap: 40px;
+    max-width: 1100px;
 }
 
-/* ==========================================
-   6. SECCIÓN DE LA IMAGEN GRANDE
-   ================================---------- */
+.main-content {
+    min-height: calc(100vh - 166px);
+}
+
 .logo-section {
-    flex: 1.2;
+    position: relative;
+    isolation: isolate;
     display: flex;
-    justify-content: center;
+    flex: 1.2;
     align-items: center;
+    justify-content: center;
+    min-height: 360px;
+}
+
+.logo-section::before {
+    position: absolute;
+    z-index: -1;
+    width: min(34vw, 340px);
+    aspect-ratio: 1;
+    background: linear-gradient(145deg, rgba(8, 185, 200, 0.16), rgba(7, 86, 199, 0.08));
+    border: 1px solid rgba(7, 86, 199, 0.08);
+    border-radius: 44% 56% 62% 38% / 43% 42% 58% 57%;
+    content: "";
+    animation: gentle-float 7s ease-in-out infinite;
 }
 
 .pet-logo-large {
+    display: block;
     width: 100%;
-    max-width: 360px; /* Tamaño grande y proporcionado como en el wireframe */
+    max-width: 365px;
     height: auto;
     object-fit: contain;
-    display: block;
+    filter: drop-shadow(0 16px 18px rgba(17, 58, 112, 0.12));
+    animation: gentle-float 6s ease-in-out infinite;
 }
 
-/* ==========================================
-   7. MENÚ DE OPCIONES (BOTONES)
-   ================================---------- */
 .options-menu {
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
-    gap: 12px;
-    max-width: 280px;
+    gap: 16px;
     width: 100%;
+    max-width: 340px;
 }
 
 .btn-option {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 11px 18px;
-    border: 1.5px solid #333333;
-    border-radius: 6px;
-    text-decoration: none;
+    justify-content: flex-start;
+    gap: 12px;
+    min-height: 56px;
+    padding: 13px 17px;
+    color: #183863;
+    background: linear-gradient(110deg, #fff, #f4f9ff);
+    border: 1px solid #dce8f5;
+    border-radius: 15px;
+    box-shadow: 0 5px 14px rgba(15, 54, 117, 0.06);
     font-size: 14px;
-    font-weight: 600;
-    color: #1e293b;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-    transition: transform 0.1s ease, filter 0.2s ease;
+    font-weight: 650;
+    text-decoration: none;
+    transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .btn-option:hover {
-    transform: translateY(-1px);
-    filter: brightness(0.96);
+    border-color: #80d8df;
+    box-shadow: 0 11px 22px rgba(7, 86, 199, 0.13);
+    transform: translate(3px, -2px);
 }
 
 .btn-icon {
-    width: 18px;
-    height: 18px;
+    flex: 0 0 19px;
+    width: 19px;
+    height: 19px;
+    color: #078fae;
 }
 
-/* Colores de los botones */
-.btn-blue {
-    background-color: #93c5fd;
-}
-
+.btn-blue,
 .btn-light-blue {
-    background-color: #bfdbfe;
+    background: linear-gradient(110deg, #fff, #f2f9ff);
 }
 
 .btn-red {
-    background-color: #f87171;
-    color: #ffffff;
+    color: var(--color-danger);
+    background: linear-gradient(110deg, #fffafa, #fff1f2);
+    border-color: #f0d7dc;
 }
 
-/* ==========================================
-   8. PIE DE PÁGINA
-   ================================---------- */
-.footer-banner {
-    background-color: #93c5fd;
-    border-top: 2px solid #333333;
-    padding: 12px;
-    text-align: center;
-    font-size: 13px;
-    color: #1e293b;
-    line-height: 1.4;
+.btn-red .btn-icon {
+    color: var(--color-danger);
+}
+
+@media (max-width: 640px) {
+    .main-content {
+        min-height: calc(100vh - 150px);
+    }
+
+    .content-layout {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo-section {
+        width: 100%;
+        min-height: 250px;
+    }
+
+    .pet-logo-large {
+        max-width: 260px;
+    }
+
+    .logo-section::before {
+        width: min(65vw, 250px);
+    }
+
+    .options-menu {
+        max-width: 420px;
+    }
 }

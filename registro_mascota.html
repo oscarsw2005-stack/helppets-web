@@ -23,25 +23,26 @@
             <div class="form-card-container">
                 
                
-                <form action="registro_mascota_exitoso.html" method="GET">
-                    
+                <form action="guardar_mascota.php" method="POST">
+                    <input type="hidden" name="cliente" value="1">
                    
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre de la mascota" required>
                     </div>
-
-                    
                     <div class="form-group">
                         <label for="raza">Raza:</label>
                         <select id="raza" name="raza" class="form-select" required>
                             <option value="">Seleccione una raza...</option>
-                            <option value="criollo">Criollo / Mestizo</option>
-                            <option value="labrador">Labrador</option>
-                            <option value="poodle">Poodle</option>
-                            <option value="siames">Siamés</option>
+                            <option value="1">Criollo / Mestizo</option>
+                            <option value="4">Labrador</option>
+                            <option value="5">Poodle</option>
+                            <option value="2">Siamés</option>
+                            <option value="3">Persa</option>
                         </select>
                     </div>
+
+                    
 
                    
                     <div class="form-group">
@@ -79,9 +80,10 @@
                   
                     
                     <div class="form-group">
-                        <label for="datos_extra">Datos Extra (Condición médica, etc.):</label>
-                        <textarea id="datos_extra" name="datos_extra" rows="3" placeholder="Condición médica, notas adicionales" required></textarea>
-                    </div>
+                        <label for="datos_extra">Datos Extra (opcional):</label>
+                         <textarea id="datos_extra" name="datos_extra" rows="3" placeholder="Condición médica, notas adicionales (opcional)"></textarea>
+                     </div>
+                     
 
                     <!-- Botón Registrar -->
                     <div class="button-group">
@@ -92,7 +94,7 @@
 
                 
                 <div class="button-group-secondary">
-                    <a href="panel_cliente.html" class="btn-volver">Volver al panel</a>
+                    <a href="panel_cliente.php" class="btn-volver">Volver al panel</a>
                 </div>
 
             </div>
