@@ -4,72 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HelpPets - Opciones Cliente</title>
-    <link rel="stylesheet" href="estilos/panel_cliente.css">
-    <!-- Iconos Lucide -->
+    <link rel="stylesheet" href="estilos/estilo_administrador.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-pattern">
+<body>
 
-    <!-- Contenedor principal tipo ventana de navegador -->
-    <div class="web-page-container">
+    <header class="navbar">
+        <div class="navbar-brand">
+            <i data-lucide="star" class="navbar-icon"></i>
+            <span>Opciones de Cliente</span>
+        </div>
+    </header>
 
-        <!-- Franja Superior Azul ("Opciones") -->
-        <header class="top-bar">
-            <div class="top-bar-title">
-                <i data-lucide="star" class="star-icon"></i>
-                <h1>Opciones</h1>
+    <main class="main-container">
+        <section class="logo-section">
+            <div class="logo-circle">
+                <img src="estilos/veterinaria.webp" alt="Logo HelpPets">
             </div>
-        </header>
+        </section>
 
-        <!-- Cuerpo central con la imagen grande y los botones abajo/alineados -->
-        <main class="main-content">
-            <div class="content-layout">
-                
-                <!-- Imagen grande del perro y gato -->
-                <div class="logo-section">
-                    <img src="estilos/22222.png" alt="HelpPets Logo" class="pet-logo-large">
-                </div>
+        <section class="options-section">
+            <nav class="options-menu">
+                <a href="solicitud_cita.html" class="option-btn">
+                    <i data-lucide="paw-print" class="btn-icon"></i>
+                    <span>Solicitar cita</span>
+                </a>
 
-                <!-- Menú de opciones del cliente -->
-                <div class="options-menu">
-                    
-                    <a href="solicitud_cita.html" class="btn-option btn-blue">
-                        <i data-lucide="paw-print" class="btn-icon"></i>
-                        <span>Solicitar cita</span>
-                    </a>
+                <a href="historial_clinico.html" class="option-btn">
+                    <i data-lucide="paw-print" class="btn-icon"></i>
+                    <span>HISTORIAL CLINICO</span>
+                </a>
 
-                    <a href="historial_clinico.html" class="btn-option btn-blue">
-                        <i data-lucide="paw-print" class="btn-icon"></i>
-                        <span>HISTORIAL CLINICO</span>
-                    </a>
+                <a href="actualizacion_datos.html" class="option-btn">
+                    <i data-lucide="refresh-cw" class="btn-icon"></i>
+                    <span>Actualizar datos</span>
+                </a>
 
-                    <a href="actualizacion_datos.html" class="btn-option btn-light-blue">
-                        <i data-lucide="refresh-cw" class="btn-icon"></i>
-                        <span>Actualizar datos</span>
-                    </a>
+                <a href="registro_mascota.html" class="option-btn">
+                    <i data-lucide="paw-print" class="btn-icon"></i>
+                    <span>Registrar mascota</span>
+                </a>
 
-                    <a href="registro_mascota.html" class="btn-option btn-light-blue">
-                        <i data-lucide="paw-print" class="btn-icon"></i>
-                        <span>Registrar mascota</span>
-                    </a>
+                <a href="index.html" class="option-btn btn-logout">
+                    <i data-lucide="lock" class="btn-icon"></i>
+                    <span>Cerrar sesión</span>
+                </a>
+            </nav>
+        </section>
+    </main>
 
-                    <a href="index.html" class="btn-option btn-red">
-                        <i data-lucide="lock" class="btn-icon"></i>
-                        <span>Cerrar sesión</span>
-                    </a>
-
-                </div>
-
-            </div>
-        </main>
-
-        <!-- Pie de página -->
-        <footer class="footer-banner">
-            <p>Contacto: info@veterinaria.com | Teléfono: 123-456-7890</p>
-            <p>© 2023 Veterinaria. Todos los derechos reservados.</p>
-        </footer>
-
-    </div>
+    <footer class="footer">
+        <p>Contacto: info@veterinaria.com | Teléfono: 123-456-7890</p>
+        <p>© 2023 Veterinaria. Todos los derechos reservados.</p>
+    </footer>
 
     <script>
         lucide.createIcons();

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios - Opciones de Administrador</title>
+    <link rel="stylesheet" href="estilos_horarios.css">
+    <link rel="stylesheet" href="estilos/estilo_horarios.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <i class="fa-regular fa-star"></i>
+            <span>Horarios - Opciones de Administrador</span>
+        </div>
+        <div class="navbar-actions">
+            <a href="opciones_admin.html" class="nav-btn btn-back">Volver</a>
+            <a href="logout.php" class="nav-btn btn-logout-top">Cerrar sesión</a>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+
+        <!-- Columna Izquierda: Logo -->
+        <section class="logo-section">
+            <div class="logo-circle">
+                <img src="estilos/veterinaria.webp" alt="Logo Veterinaria">
+            </div>
+        </section>
+
+        <!-- Columna Derecha: Tarjeta de Gestión de Horarios -->
+        <section class="schedule-section">
+            <form action="guardar_horarios.php" method="POST" class="schedule-card">
+                <div class="card-header">
+                    <h1>Gestión de Horarios</h1>
+                    <p>Asignación de turnos y jornadas laborales del personal.</p>
+                </div>
+
+                <div class="employee-selector">
+                    <label for="empleado_id">Empleado / Rol</label>
+                    <select id="empleado_id" name="empleado_id" required>
+                        <option value="1" selected>Carlos Gómez - Veterinario/a</option>
+                        <option value="2">Ana Martínez - Recepcionista</option>
+                        <option value="3">Luis Rodríguez - Asistente</option>
+                    </select>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Horario Semanal</th>
+                                <th>Horario de Turno</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="day-name">Lunes</td>
+                                <td>
+                                    <select name="turno_lunes" class="shift-select">
+                                        <option value="08:00 AM - 02:00 PM" selected>08:00 AM - 02:00 PM</option>
+                                        <option value="02:00 PM - 08:00 PM">02:00 PM - 08:00 PM</option>
+                                        <option value="08:00 AM - 05:00 PM">08:00 AM - 05:00 PM</option>
+                                        <option value="Descanso">Descanso</option>
+                                    </select>
+                                </td>
+                                <td><span class="status-badge status-active">Activo</span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="day-name">Martes</td>
+                                <td>
+                                    <select name="turno_martes" class="shift-select">
+                                        <option value="08:00 AM - 02:00 PM" selected>08:00 AM - 02:00 PM</option>
+                                        <option value="02:00 PM - 08:00 PM">02:00 PM - 08:00 PM</option>
+                                        <option value="08:00 AM - 05:00 PM">08:00 AM - 05:00 PM</option>
+                                        <option value="Descanso">Descanso</option>
+                                    </select>
+                                </td>
+                                <td><span class="status-badge status-active">Activo</span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="day-name">Miércoles</td>
+                                <td>
+                                    <select name="turno_miercoles" class="shift-select">
+                                        <option value="08:00 AM - 02:00 PM">08:00 AM - 02:00 PM</option>
+                                        <option value="02:00 PM - 08:00 PM" selected>02:00 PM - 08:00 PM</option>
+                                        <option value="08:00 AM - 05:00 PM">08:00 AM - 05:00 PM</option>
+                                        <option value="Descanso">Descanso</option>
+                                    </select>
+                                </td>
+                                <td><span class="status-badge status-active">Activo</span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="day-name">Jueves</td>
+                                <td>
+                                    <select name="turno_jueves" class="shift-select">
+                                        <option value="08:00 AM - 02:00 PM">08:00 AM - 02:00 PM</option>
+                                        <option value="02:00 PM - 08:00 PM">02:00 PM - 08:00 PM</option>
+                                        <option value="08:00 AM - 05:00 PM">08:00 AM - 05:00 PM</option>
+                                        <option value="Descanso" selected>Descanso</option>
+                                    </select>
+                                </td>
+                                <td><span class="status-badge status-off">No Laboral</span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="day-name">Viernes</td>
+                                <td>
+                                    <select name="turno_viernes" class="shift-select">
+                                        <option value="08:00 AM - 02:00 PM" selected>08:00 AM - 02:00 PM</option>
+                                        <option value="02:00 PM - 08:00 PM">02:00 PM - 08:00 PM</option>
+                                        <option value="08:00 AM - 05:00 PM">08:00 AM - 05:00 PM</option>
+                                        <option value="Descanso">Descanso</option>
+                                    </select>
+                                </td>
+                                <td><span class="status-badge status-active">Activo</span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="day-name">Sábado</td>
+                                <td>
+                                    <select name="turno_sabado" class="shift-select">
+                                        <option value="08:00 AM - 02:00 PM" selected>08:00 AM - 02:00 PM</option>
+                                        <option value="02:00 PM - 08:00 PM">02:00 PM - 08:00 PM</option>
+                                        <option value="08:00 AM - 05:00 PM">08:00 AM - 05:00 PM</option>
+                                        <option value="Descanso">Descanso</option>
+                                    </select>
+                                </td>
+                                <td><span class="status-badge status-active">Activo</span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="day-name">Domingo</td>
+                                <td>
+                                    <select name="turno_domingo" class="shift-select">
+                                        <option value="08:00 AM - 02:00 PM">08:00 AM - 02:00 PM</option>
+                                        <option value="02:00 PM - 08:00 PM">02:00 PM - 08:00 PM</option>
+                                        <option value="08:00 AM - 05:00 PM">08:00 AM - 05:00 PM</option>
+                                        <option value="Descanso" selected>Descanso</option>
+                                    </select>
+                                </td>
+                                <td><span class="status-badge status-off">No Laboral</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Guardar Horarios</button>
+                    <a href="opciones_admin.html" class="btn-cancel">Cancelar</a>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <p>Contacto: info@veterinaria.com | Teléfono: 123-456-7890</p>
+        <p>© 2023 Veterinaria. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

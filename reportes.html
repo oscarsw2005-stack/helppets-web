@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - Opciones de Administrador</title>
+    <link rel="stylesheet" href="estilos_reportes.css">
+    <link rel="stylesheet" href="estilos/estilo_reportes.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <i class="fa-regular fa-star"></i>
+            <span>Reportes - Opciones de Administrador</span>
+        </div>
+        <div class="navbar-actions">
+            <a href="opciones_admin.html" class="nav-btn btn-back">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Volver</span>
+            </a>
+            <a href="logout.php" class="nav-btn btn-logout-top">
+                <i class="fa-solid fa-lock"></i>
+                <span>Cerrar sesión</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+
+        <!-- Columna Izquierda: Logo -->
+        <section class="logo-section">
+            <div class="logo-circle">
+                <img src="estilos/veterinaria.webp" alt="Logo Veterinaria">
+            </div>
+        </section>
+
+        <!-- Columna Derecha: Tarjeta de Reportes y Estadísticas -->
+        <section class="reports-section">
+            <div class="reports-card">
+                <div class="card-header">
+                    <h1>Reportes y Estadísticas</h1>
+                    <p>Generación de informes generales de la clínica veterinaria.</p>
+                </div>
+
+                <!-- Accesos Directos de Descarga -->
+                <div class="quick-reports-grid">
+                    <a href="generar_reporte.php?tipo=citas&export=1" class="report-tile">
+                        <i class="fa-solid fa-download tile-download"></i>
+                        <i class="fa-regular fa-calendar-days tile-icon"></i>
+                        <span>Reporte de Citas</span>
+                    </a>
+
+                    <a href="generar_reporte.php?tipo=pacientes&export=1" class="report-tile">
+                        <i class="fa-solid fa-download tile-download"></i>
+                        <i class="fa-solid fa-paw tile-icon"></i>
+                        <span>Reporte de Pacientes</span>
+                    </a>
+
+                    <a href="generar_reporte.php?tipo=ingresos&export=1" class="report-tile">
+                        <i class="fa-solid fa-download tile-download"></i>
+                        <i class="fa-solid fa-sack-dollar tile-icon"></i>
+                        <span>Reporte de Ingresos / Ventas</span>
+                    </a>
+
+                    <a href="generar_reporte.php?tipo=inventario&export=1" class="report-tile">
+                        <i class="fa-solid fa-download tile-download"></i>
+                        <i class="fa-solid fa-boxes-stacked tile-icon"></i>
+                        <span>Reporte de Inventario</span>
+                    </a>
+                </div>
+
+                <!-- Filtros de Reporte -->
+                <form action="generar_reporte.php" method="GET" class="filters-form">
+                    <h2 class="filters-title">Filtros de Reporte</h2>
+
+                    <div class="filters-row">
+                        <div class="filter-group">
+                            <label for="fecha_inicio">Fecha Inicio</label>
+                            <div class="input-icon-wrap">
+                                <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="fecha_fin">Fecha Fin</label>
+                            <div class="input-icon-wrap">
+                                <input type="date" id="fecha_fin" name="fecha_fin" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="tipo_reporte">Tipo de Reporte</label>
+                        <select id="tipo_reporte" name="tipo_reporte" required>
+                            <option value="" selected disabled>Seleccione un tipo de reporte</option>
+                            <option value="citas">Reporte de Citas</option>
+                            <option value="pacientes">Reporte de Pacientes</option>
+                            <option value="ingresos">Reporte de Ingresos / Ventas</option>
+                            <option value="inventario">Reporte de Inventario</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-generate">Generar Reporte</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <p>Contacto: info@veterinaria.com | Teléfono: 123-456-7890</p>
+        <p>© 2023 Veterinaria. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
