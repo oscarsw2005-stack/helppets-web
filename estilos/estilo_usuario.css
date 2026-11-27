@@ -1,0 +1,72 @@
+@import url("estilo_administrador.css");
+
+.registration-card {
+    max-width: 430px;
+}
+
+.registration-card h2 {
+    margin-bottom: 20px;
+    color: #183962;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.registration-card .grupo-campo {
+    margin-bottom: 14px;
+}
+
+.registration-card label {
+    display: block;
+    margin-bottom: 6px;
+    color: #183962;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.registration-card input {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    color: #183962;
+    background: #fff;
+    border: 1px solid #d6e5f7;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.registration-card input::placeholder {
+    color: #8298b2;
+}
+
+.registration-card input:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.15);
+}
+
+.enlaces-extra {
+    margin: 4px 0 16px;
+    font-size: 0.88rem;
+    text-align: center;
+}
+
+.enlaces-extra a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.enlaces-extra a:hover {
+    text-decoration: underline;
+}
+
+.registration-submit {
+    width: 100%;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(90deg, #003893 0%, #0056b3 65%, #009bb5 100%);
+    border-color: #0056b3;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
