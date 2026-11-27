@@ -23,7 +23,8 @@
     font-weight: 600;
 }
 
-.registration-card input {
+.registration-card input,
+.registration-card select {
     width: 100%;
     min-height: 44px;
     padding: 10px 12px;
@@ -40,6 +41,11 @@
 }
 
 .registration-card input:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.15);
+}
+
+.registration-card select:focus {
     border-color: #0077b6;
     box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.15);
 }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HelpPets te ayuda a organizar el cuidado y la atención veterinaria de tus mascotas.">
+    <title>HelpPets - Cuidado para tus mascotas</title>
+    <link rel="stylesheet" href="estilos/landingpage.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="landingpage.html" aria-label="HelpPets, inicio">
+            <img src="estilos/logo.png" alt="">
+            <span>HelpPets</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Navegación principal">
+            <a class="nav-link" href="#servicios">Servicios</a>
+            <a class="button button-outline" href="index.html">Iniciar sesión</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow"><i data-lucide="heart-pulse" aria-hidden="true"></i> Bienvenido a HelpPets</p>
+                <h1>El cuidado de tu mascota, <span>más cerca.</span></h1>
+                <p class="hero-description">
+                    Organiza la atención veterinaria de tus compañeros y encuentra en un solo lugar
+                    las herramientas para acompañar su bienestar.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="index.html">
+                        Iniciar sesión <i data-lucide="arrow-right" aria-hidden="true"></i>
+                    </a>
+                    <a class="button button-secondary" href="registrar_usuario.html">Crear una cuenta</a>
+                </div>
+                <p class="hero-note"><i data-lucide="shield-check" aria-hidden="true"></i> Un espacio pensado para el cuidado de tus mascotas</p>
+            </div>
+
+            <div class="hero-visual">
+                <div class="visual-glow"></div>
+                <img src="estilos/logo.png" alt="Logo de HelpPets con un perro veterinario">
+                <div class="visual-badge">
+                    <i data-lucide="paw-print" aria-hidden="true"></i>
+                    <span>Bienestar en cada etapa</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="servicios">
+            <div class="section-heading">
+                <p class="eyebrow">Todo en un mismo lugar</p>
+                <h2>Una forma más sencilla de cuidar</h2>
+                <p>Accede a las herramientas de HelpPets cuando las necesites.</p>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <div class="service-icon"><i data-lucide="calendar-days" aria-hidden="true"></i></div>
+                    <h3>Citas veterinarias</h3>
+                    <p>Consulta y organiza la atención de tus mascotas.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon"><i data-lucide="clipboard-list" aria-hidden="true"></i></div>
+                    <h3>Historial clínico</h3>
+                    <p>Mantén la información de salud de tus compañeros a mano.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon"><i data-lucide="paw-print" aria-hidden="true"></i></div>
+                    <h3>Perfiles de mascotas</h3>
+                    <p>Ten organizados los datos importantes de cada mascota.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="closing-banner">
+            <div>
+                <h2>Empieza a cuidar con HelpPets</h2>
+                <p>Inicia sesión para acceder a tu espacio.</p>
+            </div>
+            <a class="button button-light" href="index.html">
+                Ir a iniciar sesión <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Contacto: info@veterinaria.com | Teléfono: 123-456-7890</p>
+        <p>© 2026 HelpPets</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
