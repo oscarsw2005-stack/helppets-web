@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 }
 
 $documento  = trim($_POST["documento"] ?? "");
-$contrasena = $_POST["contrasena"] ?? "";
+$contrasena = $_POST["password"] ?? "";
 
 if ($documento === "" || $contrasena === "") {
     die("Por favor ingresa tu documento y contraseña.");
