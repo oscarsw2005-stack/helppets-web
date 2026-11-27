@@ -83,12 +83,8 @@ switch ((int) $usuario["rol_id_rol"]) {
         header("Location: Panel_veterinaria.html");
         break;
     case 4: // Cliente
+    default:
         header("Location: panel_cliente.html");
         break;
-    default:
-        $_SESSION = [];
-        session_destroy();
-        http_response_code(403);
-        exit("La cuenta no tiene un rol de acceso válido. Contacta al administrador.");
 }
 exit;
