@@ -1,6 +1,13 @@
 <?php
 session_start();
 require_once "conexion_bd.php";
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+echo "<pre>";
+var_dump($_SESSION);
+var_dump($_POST);
+echo "</pre>";
 
 // 1. Verificar que el usuario tenga sesión iniciada
 if (!isset($_SESSION["id_usuario"])) {
